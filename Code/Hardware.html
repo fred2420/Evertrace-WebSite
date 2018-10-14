@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Hardware.css">
+        <link rel="stylesheet" href="Wiki.css">
+    </head>
+    <body>
+            <img src="img/Logo.png" height="80px" style="position: absolute; margin: 40px;">
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="Hardware.html">Hardware</a>
+                <a href="embedded.html">Embedded</a>
+                <a href="Software.html">Software</a>
+              </div>
+          <div class="hero-image">
+            <div class="hero-text">
+              <h2>Hardware</h2>
+              <p style="color: #31b2f8"> Schematic and PCB Design</p>   
+            </div>
+          </div>    
+          <div class="fadee" >
+            <div class="hero-bottom-menu">
+                 
+            </div>
+          </div>
+
+        <div class="wiki">
+            <div class="sidenav">
+                <h2 href="#" id="Overview" onClick="GoTo(this.id)">Overview</h2>
+                
+                <h3 href="#" id="Designconstraints" onClick="GoTo(this.id)">Design constraints</h3>
+                <h3 href="#" id="Altium"  onClick="GoTo(this.id)">Circuit Studio</h3>
+                
+
+                <h2 href="#" id="Schematic" onClick="GoTo(this.id)">Schematic</h2>
+                <h3 href="#" id="ATMega" onClick="GoTo(this.id)">AT Mega 328p</h3>
+                
+
+                <h2 href="#" id="PCB" onClick="GoTo(this.id)">PCB</h2>
+                <h3 href="#" id="RF" onClick="GoTo(this.id)">RF</h3>
+                <h2 href="#" id="Case" onClick="GoTo(this.id)">Case</h2>
+            </div>
+
+            <div class="content" >
+                    <H3>Quick Links</H3>
+                    <a href="https://circuitmaker.com/Projects/Details/fred-tucker/BG96-Arduino" target="_blank"> PCB and schematic</a>
+                    <a href="https://www.codico.com/shop/media/datasheets/Quectel_BG96_Hardware_Design_V1.1.pdf" target="_blank">BG96 Hardware PDF</a>
+                    <a href="https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf" target="_blank">Ardunio Reference Design</a>
+                    <a href="https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf" target="_blank">AT MEGA 328P Datasheet</a>
+
+                <h2 id="OverviewHeader">Hardware Overview</h2>
+                <H3 id="DesignconstraintsHeader">Design constraints</H3>
+               
+                <p>The overarching principle of making the first evertrace board was to make a development board. A board that could be easily used for testing and experimentation before spawning a family of smaller purpose built NB-IOT products. </p>
+                
+                <p> The PCB is built around the Atmel Atmega328p 8 bit microcontroller. The same microcontroller used on the Arduino UNO. Arduino is open source with a huge community online which cuts down the learning curve. Schematics for the Arduino UNO can be found <a href="https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf" target="_blank">here</a>. </p>
+                
+                <p>All components are were possible 0805 package size, this should allow easy testing soldering and re-soldering of components. All free GPIOs from the microcontroller are available and 6 debug LEDs are included on the board. (Jumper pins all the LEDs to be connected and removed). </p>
+
+                <img src="/img/PCBTop.png" style="width: 100%">
+
+                <h4>Micro USB</h4>
+                <p>The Board is both programed and powered through a Micro USB port. No reprogramming of the Quectel firmware is possible - I have never needed to do this.</p>
+                <h4>Coin Battery</h4>
+                <p>The coin battery provides power for the real time clock chip. Coin battery is used instead of a capacitor to avoid having to deal with inrush current and to allow the real time clock to be reset.</p>
+
+                       
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+
+                
+                
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <H3 id="AltiumHeader">Altium Circuit Studio</H3>
+                <p>The pcb and schematic were created using Altium Circuit stuido, It is a free version of Altium, with the two large caveats first - all projects are stored on the cloud and the program its self is very "webby". Second All porjects are open source everyone can see all your projects</p>
+                <p>The evertrace project is found at</p>
+                <a href="https://circuitmaker.com/Projects/Details/fred-tucker/BG96-Arduino">Fork PCB and schematic</a>
+
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+               
+                <h2 href="#" id="SchematicHeader">Schematic</h2>
+                <H3 id="ATMegaHeader">AT Mega 328P</H3>
+               
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <img  src="/img/ATMega328PPinOut.png" >
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <h2 href="#" id="PCBHeader">PCB</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <h3 href="#" id="RFHeader">RF</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <h2 href="#" id="CaseHeader">Case</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+     
+           
+            </div>
+        </div>
+
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="wiki.js" ></script>
+    </body>
+</html>

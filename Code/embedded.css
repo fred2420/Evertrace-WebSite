@@ -1,0 +1,95 @@
+body, html {
+    height: 100%;
+    background-color: #efefef;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* The hero image */
+.hero-image {
+    
+    background-image: url("img/Embedded-Hero-Banner.png");
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   
+}
+.menu{
+width: 100%;
+position: absolute;
+display: flex;
+justify-content: flex-end;
+padding-right: 50px;
+}
+
+.menu > a{
+    margin: 20px;
+    color: black;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3e4348;
+}
+
+.fadee {
+    height: 100px;
+    margin-top: -100px;
+    width: 100%;
+    background-image: linear-gradient( rgba(239,239,239,0), rgba(239,239,239,1));
+    text-align: center;
+}
+
+
+.menu > a:hover, a:focus, a:active {
+    color: #999;
+    text-decoration: none;
+}
+.menu > a {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+}
+.menu > a {
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    color: #000;
+}
+.menu > a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+.menu > a:active::before {
+    background-color: #000;
+}
+.menu > a:hover::before, a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
