@@ -286,7 +286,7 @@ padding-right: 50px;
 }
 
 .BlackAndWhite{
-    background-image: url(/img/DarinaBlack&White.png);
+    background-image: url(img/DarinaBlack&White.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -294,7 +294,7 @@ padding-right: 50px;
 }
 
 .Colorized{
-    background-image: url(/img/DarinaColorized.png);
+    background-image: url(img/DarinaColorized.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
