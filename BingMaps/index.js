@@ -104,7 +104,6 @@ function loadDoc() {
       //  Microsoft.Maps.Events.addHandler(pushpinPostdam, 'click', Truck2);   
       });
 
-     
   }
 
   function Truck1(){
@@ -148,6 +147,8 @@ function loadDoc() {
     let LC = document.getElementById("LineChart");
     let steve = parseInt(window.getComputedStyle(LC).marginLeft);
     LC.style.marginLeft = (steve - 2) + "px";
+
+    Document.getElementById('CounterShort').innerHTML+= 1;
   },100);
 
 var x = setInterval(function() {
@@ -157,6 +158,9 @@ var x = setInterval(function() {
     if (i > GpsData.length -1)
     {
         i = 0;
+        let LC = document.getElementById("LineChart");
+        let steve = parseInt(window.getComputedStyle(LC).marginLeft);
+        LC.style.marginLeft = 0 + "px";
     } ;
 
     if(TruckSelected === 1){
@@ -186,12 +190,12 @@ var w = 1600;
 
 
 var linefun = d3.svg.line()
-.x(function(d) { return d.Counter * 100; })
+.x(function(d) { return d.Counter * 60; })
 .y(function(d) { return d.speed ;})
 .interpolate("linear");
 
 var area = d3.svg.area()
-    .x(function(d) { return d.Counter * 100; })
+    .x(function(d) { return d.Counter * 60; })
     .y0(h)
     .y1(function(d) { return d.speed ;})
 
