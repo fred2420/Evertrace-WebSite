@@ -148,7 +148,7 @@ function loadDoc() {
     let steve = parseInt(window.getComputedStyle(LC).marginLeft);
     LC.style.marginLeft = (steve - 2) + "px";
 
-    Document.getElementById('CounterShort').innerHTML+= 1;
+    document.getElementById('CounterShort').innerHTML+= 1;
   },100);
 
 var x = setInterval(function() {
