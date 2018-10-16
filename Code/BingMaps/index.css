@@ -1,0 +1,137 @@
+html, body{
+    padding:0;
+    margin:0;
+    height:100%;
+}
+
+.directionsContainer{
+    width:380px;
+    height:100%;
+    overflow-y:auto;
+    float:left;
+}
+
+#myMap{
+    position:relative;
+    width: 50%;
+}
+
+button{
+    background-color: transparent;
+    width: 400px;
+    height:200px;
+    margin: 20px;
+}
+
+.TruckData{
+    width: 400px;
+    height:200px;
+    margin: 10px;
+    border-bottom: 1px solid grey;
+    background-color: aliceblue;
+}
+
+.MappingDiv{
+   width: 100%;
+   height: 50%;
+   display: flex;
+   justify-content: space-around;
+}
+.trucks{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.trucks h3{
+    color: lightblue;
+}
+
+.StatsViewer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Fleet-Managment-Text{
+    text-align: center; 
+    margin-top: 2rem;
+    opacity: 0%;
+    font-size: 2rem;
+    color: #39875f;
+}
+
+.Barchart{
+    height: 3px;
+    width: 200px;
+   display: flex;
+   
+}
+.Weight{
+    background-color: red;
+    height: 100%;
+    width: 50%;
+}
+.Remainder{
+    background-image: linear-gradient(to right, red , yellow);
+    height: 100%;
+    width: 50%;
+}
+
+.axisRed line{
+    stroke: red;
+  }
+  
+  .axisRed path{
+    stroke: red;
+  }
+  
+  .axis text{
+    color: black;
+  }  
+
+  .axis{
+      stroke: black;
+      stroke-width: 1px;
+      height: 1px;
+      fill: transparent;
+  }
+
+  .WeightBarChart70
+  {
+        width: 70%;
+      transition: 1s;
+      background-image: linear-gradient(to right, darkgreen , lightgreen);
+  }
+  .WeightBarChart40
+  {
+    width: 40%;
+    height: 100%;
+    transition: 1s;
+    background-image: linear-gradient(to right, darkgreen , lightgreen);
+  }
+
+
+
+  .StatsBoxes{
+    overflow-x: hidden;
+    padding: 20px;
+    border: black;
+    border-width: 2px;
+  }
+  
+  .StatsBoxes p{
+    font-weight: 300;
+    font-family: sans-serif;
+  } 
+
+  StatsViewer p{
+    color: #39875f;
+    font-family: sans-serif;
+  }
+
+  
+  .area {
+   fill: url(#svgGradient);
+   				
+    stroke-width: 0px;	
+  }

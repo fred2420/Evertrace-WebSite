@@ -18,6 +18,11 @@
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script type='text/javascript' src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd"
         async defer></script>
+        <script> 
+          $(function(){
+            $("#DivContent").load("BingMaps/index.html"); 
+          });
+          </script> 
     </head>
     <body>
         <img src="img/Logo.png" height="80px" style="position: absolute; margin: 40px;">
@@ -41,6 +46,10 @@
               <a id= "Team" style="font-size: 1rem; color: #216BE1" onClick="GoTo(this.id)">TEAM</a>
             </div>
       </div>
+
+      <body> 
+        <div id="DivContent"></div>
+     </body> 
 
       <p class="Fleet-Managment-Text" id="Fleet-Managment-Text">Fleet Managment</p>
       <p style="text-align: center;"  >Unlease the treasure trove of Infomation in your truck fleet.</p>
