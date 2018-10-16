@@ -316,7 +316,7 @@ padding-right: 50px;
  }
  
  .Gaultier-BlackAndWhite{
-     background-image: url(/img/GaultierBlack&White.png);
+     background-image: url(img/GaultierBlack&White.png);
      background-size: cover;
      background-repeat: no-repeat;
      width: 100%;
@@ -324,7 +324,7 @@ padding-right: 50px;
  }
  
  .Gaultier-Colorized{
-     background-image: url(/img/GaultierColorized.png);
+     background-image: url(img/GaultierColorized.png);
      background-size: cover;
      background-repeat: no-repeat;
      width: 100%;

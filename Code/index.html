@@ -135,46 +135,7 @@
     <div>
 
     
-    <div style="width: 100px; height: 100px; background-color: aqua"></div>
-    <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
-
-
-   
-
-
-
-
-
-
-      <svg>
-        <rect width="50" height="100" style="fill: blue"></rect>
-      </svg>
-
-      <script>
-      var w = 200;
-      var h = 400;
-      var padding = 2;
-      var dataset = [5,3,2,7];
-      var svg = d3.select("body")
-                  .append("svg")
-                  .attr("width", w)
-                  .attr("height",h);
-
-      svg.selectAll("rect")
-      .data(dataset)
-      .enter()
-      .append("rect")
-      .attr("x", function(d, i){
-        return (i*30);
-      })
-      .attr("y",0)
-      .attr("width",20)
-      .attr("height",100);
-
-      </script>
-
     
-    </div>
 
       <footer style="height: 100vh;"></footer>
 
