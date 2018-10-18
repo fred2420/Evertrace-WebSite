@@ -1,0 +1,108 @@
+
+
+.wiki{
+    position: relative;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+
+.wiki h3 {
+    font-weight: lighter;
+}
+
+.sidenav {
+    width: 200px;
+    min-width: 200px;
+    position: sticky;
+    height: 80vh;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #615A5F;
+    overflow-x: show;
+    padding: 80px 80px;
+    color: white;
+}
+
+.sidenav h2 {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    font-weight: lighter;
+    font-size: 2rem;
+    border-bottom: 1px solid #b2b1b1;
+}
+.sidenav h3 {
+    padding: 0px 8px 3px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #b2b1b1;
+    display: block;
+    font-weight: lighter;
+}
+
+.sidenav h2:hover {
+    color: #064579;
+    cursor: pointer;
+}
+
+.sidenav h3:hover {
+    color: #064579;
+    cursor: pointer;
+}
+
+.content {
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    
+}
+
+code {
+    font-family: monospace;
+
+}
+.code{
+    padding: 40px;
+    margin: 40px;
+    background-color: #1e1e1e;
+    color: white;
+}
+.codesingle{
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.codeComment{
+    color: green;
+}
+
+a{
+    color: blue;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.variable{
+    color: #2c7cd6;
+}
+.keyword{
+    color: lightseagreen;
+}
+
+.string{
+    color: #ce743a;
+}
