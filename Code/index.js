@@ -73,9 +73,9 @@ function LebensLaufShow() {
 
 
 function GetMap(){
-  alert("");
+
   var map = new Microsoft.Maps.Map('#myMap');
-  aler("");
+
   }
 
 
