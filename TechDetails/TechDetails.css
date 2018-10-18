@@ -1,0 +1,12 @@
+.techDetailsImg{
+
+    
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(TechDetails.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    position: absolute;
+}
+
