@@ -12,7 +12,9 @@
         <link rel="stylesheet" href="TechDetails.css">
     </head>
     <body>
-
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
 
        <div class="techDetailsImg">
@@ -23,7 +25,24 @@
                     <img class="radiowave" src="wavesvg.svg" style="width: 100%; height: 100%;" >
                 </div>
        </div>
-        
-        <script src="" async defer></script>
+       <button onclick="flip()">flip the card</button>
+       <section class="container" >
+         <div class="card" onclick="flip()" >
+           <div class="front">
+                <img id="FrontImg" src="img/simVodafone.png" alt="Avatar" style="width:100%; ">
+                <h2 style="text-align: center">Germany</h2>
+           </div>
+           <div class="back">
+                <img src="img/simO2.png" alt="Avatar" style="width:100%;">
+                <h2>UK</h2>
+           </div>
+         </div>
+       </section>
+       
+      
+
+
+    
+        <script src="TechDetails.js" async defer></script>
     </body>
 </html>
