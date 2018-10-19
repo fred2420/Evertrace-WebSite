@@ -10,14 +10,16 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="TechDetails.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
         <link rel="stylesheet" href="index.css">
         <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script type='text/javascript' src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd"
-        async defer></script>
+        <script type='text/javascript' src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd"></script>
+        <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+        
     
     </head>
     <body>
@@ -46,7 +48,7 @@
     
 
     
-
+<!--Fleet Managment-->
       <p class="Fleet-Managment-Text" id="Fleet-Managment-Text">Fleet Managment</p>
       <p style="text-align: center;"  >Unlease the treasure trove of Infomation in your truck fleet.</p>
      <div class="Split-Animation">
@@ -55,7 +57,6 @@
             <div class="Truck-Bottom">
             </div>
             <img style="position: absolute; margin-left: 400px; " id="Wheel" class="Wheel" src="img/wheel.png">
-           
        </div> 
 
        <div class="Truck-Text">
@@ -68,6 +69,28 @@
        </div>
     </div>
 
+    <!--Text Details-->
+    <div class="techDetailsImg">
+      <div style="position: absolute; width: 20%; height: 20%;  margin-left: 16.5%; margin-top: 15% ">
+              <img class="radiowave" src="img/wavesvg.svg" style="width: 100%; height: 100%;" >
+           </div>
+           <div style="position: absolute;  width: 20%; height: 20%;  margin-left: 57.5%; margin-top: 18.5% ">
+              <img class="radiowave" src="img/wavesvg.svg" style="width: 100%; height: 100%;" >
+          </div>
+ </div>
+ <section class="container" >
+   <div class="card" onclick="flip()" >
+     <div class="front">
+          <img id="FrontImg" src="img/simVodafone.png" alt="Avatar" style="width:100%; ">
+          <p  id="CountryTextFront" style="text-align: center"></p>
+     </div>
+     <div class="back">
+          <img id="BackImg" alt="Avatar" style="width:100%;">
+          <p id="CountryTextBack"></p>
+     </div>
+   </div>
+ </section>
+ <!--Digital Jorney-->
     <h2 id="DataHeader" style="text-align: center">Digital Jorney </h2>
     <div class="SurfacePro">
   
@@ -84,6 +107,8 @@
           <img src="img/SurfacePro.png" width="100%">
       </div>
     </div>
+
+     <!--Project-->
     <div class="Project">
     <h2 id="ProjectsHead" style="text-align: center; color: #0ea65c; margin-bottom: 100px"> +D Pilot with IMPERIAL</h2>
     <p style="text-align: center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ducimus ea soluta magnam, sit id recusandae cupiditate quisquam culpa voluptatibus, explicabo itaque ipsa enim debitis? Possimus in mollitia facere voluptate.</p>
@@ -105,16 +130,9 @@
     </div>
   </div>
 
-
-    
-    
-
-
 </div>
 
-
-
-
+ <!--Team-->
     <p id="TeamHeader" class="MeetTheTeam" style="color: #31b2f8">Meet The Team</p>
     <div class="Team">
     <div id="DarinaPhoto" class="DarinaPhoto">
@@ -137,13 +155,17 @@
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sapiente ratione incidunt distinctio suscipit corporis, earum doloribus aspernatur iure! Quidem quia esse placeat maxime commodi! esse placeat</p>
     </div>
 
-    <div>
+
+  
+
+ 
 
     
     
 
       <footer style="height: 100vh;"></footer>
 
+      <script src="TechDetails.js" async defer></script>
      <script src="index.js"></script>
      <script src="wiki.js" ></script>
     </body>
