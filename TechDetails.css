@@ -110,5 +110,46 @@
     -o-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }
+.TechDetailsTitles{
+  color: #369bc2;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.TechDetailsTitlescolor{
+  transition: 2s;
+  color: #034b02;
+}
+
+.test1{
+  color: white;
+  opacity: 0;
+}
+
+.visable{
+  color: white;
+  opacity: 100;
+  transition: 2s
+
+}
+.TechDetailsContent{
+  color: white;
+  font-weight: 400;
+}
+
+.WhiteLine{
+  position: absolute; 
+  color: white; 
+  background-color:
+  white; border-color:
+  white; height: 1px; 
+
+  width:0%;
+  transition: 2s
+}
+
+.WhiteLineBigger{
+  width:10%;
+  transition: 2s
+}
 
 

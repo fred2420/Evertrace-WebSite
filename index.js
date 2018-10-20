@@ -38,6 +38,22 @@ new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
+new ScrollMagic.Scene({
+  triggerElement: '#GPSTechContent',
+  triggerHook: 0.5
+})
+.setClassToggle('.test1', 'visable')
+.addIndicators()
+.addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.WhiteLine',
+  triggerHook: 0.5
+})
+.setClassToggle('.WhiteLine', 'WhiteLineBigger')
+.addIndicators()
+.addTo(controller);
+
 
 
 
