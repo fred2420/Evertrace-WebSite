@@ -4,8 +4,8 @@ let topcard = 0;
 var LineChartTimer = setInterval(function() {
 
   i +=1;
-  let Sims =  ['img/simO2.png', 'img/simVodafone.png', 'img/simDeutcheTelekom.png', 'img/LycaTelekom.png']
-  let Countries =  ['UK', 'France', 'Germany', 'Ukraine']
+  let Sims =  ['img/simO2.png', 'img/simVodafone.png', 'img/simDeutcheTelekom.png', 'img/LycaTelekom.png','img/simTele.png']
+  let Countries =  ['UK', 'France', 'Germany', 'Ukraine', 'Spain']
 // reset counter
   if(i > Sims.length ){
     i = 0;
@@ -32,27 +32,16 @@ var LineChartTimer = setInterval(function() {
     $('#CountryTextFront').html(Countries[i +1]);
     
     topcard = 0;
-    
  
     console.log("bottom");
   }
-
-
 }
-
-
-
-  
- 
     console.log("flipped");
    
 
 
 $('.card').toggleClass('flipped');
-
-
-    
-   
+ 
   },3500);
 
 

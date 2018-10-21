@@ -1,5 +1,5 @@
 //var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
-let i = 0;
+let Mappingi = 0;
 let TruckSelected = 0;
 
 
@@ -152,12 +152,12 @@ function loadDoc() {
   },100);
 
 var x = setInterval(function() {
-    i += 1;
-    document.getElementById("Counter").innerHTML ="Counter " + i ;
+    Mappingi += 1;
+    document.getElementById("Counter").innerHTML ="Counter " + Mappingi ;
 
-    if (i > GpsData.length -1)
+    if (Mappingi > GpsData.length -1)
     {
-        i = 0;
+        Mappingi = 0;
         let LC = document.getElementById("LineChart");
         let steve = parseInt(window.getComputedStyle(LC).marginLeft);
         LC.style.marginLeft = 0 + "px";

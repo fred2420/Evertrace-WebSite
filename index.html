@@ -9,16 +9,20 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
         <link rel="stylesheet" href="TechDetails.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" type="text/css" href="Mapping.css">
         <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script type='text/javascript' src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd"></script>
+        <script type='text/javascript'
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap'
+        async defer></script>
         <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+        <script src="jquery.easypiechart.js"></script>
         
     
     </head>
@@ -166,10 +170,101 @@
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sapiente ratione incidunt distinctio suscipit corporis, earum doloribus aspernatur iure! Quidem quia esse placeat maxime commodi!</p>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sapiente ratione incidunt distinctio suscipit corporis, earum doloribus aspernatur iure! Quidem quia esse placeat maxime commodi! esse placeat</p>
     </div>
+
+
+    <p class="Fleet-Managment-Text" id="Fleet-Managment-Text">Fleet Tracking</p>
+    <p style="text-align: center;"  >Unlease the treasure trove of Infomation in your truck fleet.</p>
+
+<div class="MappingDiv">
+        <div class="trucks" >
+                <p class="Fleet-Managment-Text" style="text-align: center">Deployed Trucks</p>
+                <div class="TruckData" onclick="Truck1()">
+                   <h3> Truck 1</h3>
+                   <p>JK 00 25</p>   
+            </div>
+           
+        <div class="TruckData" onclick="Truck2()">
+                    <h3> Truck2</h3>
+                    <h4>AB 45 21</h4>      
+            </div>
+            <div class="TruckData" onclick="Truck2()">
+                    <h3> Truck3</h3>
+                    <h4>AB 45 21</h4>       
+            </div>    
+    </div>
+<div id="myMap"></div>
+
+</div>
+
+<div class="StatsViewer">
+
+
+<div>
+        <div class="DestinationStats StatsBoxes" style="display: flex;">
+            <div style="margin: 20px">
+                <h3>Origin</h3>
+                <br>
+                <p style="font-size: 2rem; color: grey; margin-top: -2rem; text-align: center" id="OriginHeader"></p>
+            </div>
+           <div style="margin: 20px">
+                <h3>Destination</h3>
+                <br>
+                <p style="font-size: 2rem; color: grey; margin-top: -2rem; text-align: center"  id="DestinationHeader"></p>
+           </div>
+        </div>
+        <h3 style="text-align: center">ETA</h3>
+        <p style="font-size: 2rem; color: grey; text-align: center" id="ETA"></p>
+</div>
+
+
+ 
+  
+<!--Current Speed-->
+    <div class="LineChartViewer StatsBoxes" style=" width: 400px;  overflow-x: hidden; padding: 20px">
+        <h3>Current Speed <span id="CurrentSpeed" style="font-size: 2rem; color: grey"></span></h3>
+        <div class="LineChartAndScale">
+                <img src="img/line.png" style="position: absolute; margin-left: -35px; margin-right: 0px; margin-bottom: 0px; height: 140px;">
+        <div id="LineChart" style="width: 1600px; height: 140px"></div>
+    </div>    
+    </div>
+
+    <!--Weight-->
+
+    <div class="StatsBoxes">
+            <h3 >Current Weight</h3>
+            <div style="display: flex; align-items: center; ">
+                    <p id="WeightPercentage" style="font-size: 2rem; color: grey"></p>
+                    <div class="Barchart" style="background-color: lightgrey; ">
+                        <div id="WeightBarChart"></div>
+                    </div>
+            </div>
+            <h3 >Price Per ton</h3>
+            <div style="display: flex; align-items: center; ">
+                    <p id="PricePerTon" style="font-size: 2rem; color: grey">70%</p>
+                    <div class="Barchart" style="background-color: lightgrey; ">
+                        <div id="PriceBarChart"></div>
+                    </div>
+            </div>
+        </div>
+<!--distance left -->
+    <div>
+        <h3> Distance remaining <span id="DistanceLeft" style="font-size: 2rem; color: grey; margin-top: -2rem;"></span> </h3>
+        <div class="container">
+                <div class="box">
+                    <div id="chart" class="chart" data-percent="50"></div>
+                </div>
+            </div>
+            <p style="font-size: 2rem; color: grey; margin-top: -2rem;" id="DistanceLeftPercentage"></p>
+    </div>  
+
+</div>
+    <p id="Counter"></p>
+    <p id="CounterShort">1</p>
     
       <footer style="height: 100vh;"></footer>
 
       <script src="TechDetails.js" async defer></script>
+      <script src="Mapping.js"></script>
      <script src="index.js"></script>
      <script src="wiki.js" ></script>
     </body>
