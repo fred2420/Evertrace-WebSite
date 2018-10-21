@@ -57,7 +57,7 @@
 
   .container {
     background-color: transparent;
-    width:4% ;
+    width:6% ;
     height: 4%;
     position: relative;
     -webkit-perspective: 800px;
@@ -129,7 +129,6 @@
   color: white;
   opacity: 100;
   transition: 2s
-
 }
 .TechDetailsContent{
   color: white;
@@ -142,7 +141,6 @@
   background-color:
   white; border-color:
   white; height: 1px; 
-
   width:0%;
   transition: 2s
 }
