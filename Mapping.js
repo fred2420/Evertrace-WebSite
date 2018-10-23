@@ -188,9 +188,7 @@ var x = setInterval(function() {
 }, 2000);
 
 function ShowLineChart(){
-    document.getElementById("LineChart").innerHTML = "";
-
-console.log("hi");
+document.getElementById("LineChart").innerHTML = "";
 var h = 150;
 var w = 1600;
 
@@ -246,11 +244,6 @@ var viz =svg.append("path")
     "fill": "none"
     });
 
-  
-
-     
-
-//.attr("class", "area")
     var x = d3.scale.ordinal()
 	.domain([0,1,2,3,4,5])
     .rangeBands([0,w]);
@@ -279,8 +272,6 @@ svg.append("g")
     .attr("class","axis")
     .attr("class", "axisRed")
     .call(yAxis);
-
-
 }
 
 function ShowPieChart(Complete) {
