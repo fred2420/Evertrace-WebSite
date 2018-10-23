@@ -26,17 +26,17 @@ var LineChartTimer = setInterval(function() {
     topcard = 1;
 
  
-    console.log("top");
+  
   }else{
     $('#FrontImg').attr('src',Sims[i +1]);
     $('#CountryTextFront').html(Countries[i +1]);
     
     topcard = 0;
  
-    console.log("bottom");
+  
   }
 }
-    console.log("flipped");
+  
    
 
 

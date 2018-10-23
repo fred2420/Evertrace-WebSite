@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
     document.getElementById("DarinaPhoto").addEventListener("click", DarinaLebensLaufShow);
     document.getElementById("GaultierPhoto").addEventListener("click", GaultierLebensLaufShow);
-    GetMap();
+   
 });
 
 var controller = new ScrollMagic.Controller();
@@ -86,13 +86,6 @@ function LebensLaufShow() {
   return false;
 }
 
-
-
-function GetMap(){
-
-  var map = new Microsoft.Maps.Map('#myMap');
-
-  }
 
 
 //Fleet-Managment-Text

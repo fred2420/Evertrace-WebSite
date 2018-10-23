@@ -16,19 +16,18 @@ html, body{
     width: 50%;
 }
 
-button{
-    background-color: transparent;
-    width: 400px;
-    height:200px;
-    margin: 20px;
-}
 
 .TruckData{
     width: 400px;
     height:200px;
     margin: 10px;
-    border-bottom: 1px solid grey;
-    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trucks h3{
+    color: lightblue;
+    font-size: 2rem;
 }
 
 .MappingDiv{
@@ -40,25 +39,16 @@ button{
 .trucks{
     display: flex;
     flex-direction: column;
-    
 }
 
-.trucks h3{
-    color: lightblue;
-}
+
 
 .StatsViewer{
     display: flex;
     justify-content: space-evenly;
 }
 
-.Fleet-Managment-Text{
-    text-align: center; 
-    margin-top: 2rem;
-    opacity: 0%;
-    font-size: 2rem;
-    color: #39875f;
-}
+
 
 .Barchart{
     height: 3px;

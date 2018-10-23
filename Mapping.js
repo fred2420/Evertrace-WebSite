@@ -1,4 +1,10 @@
 //var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+    document.getElementById('myMap').innerHTML = "found";
+  
+  
 let Mappingi = 0;
 let TruckSelected = 0;
 
@@ -60,32 +66,32 @@ function loadDoc() {
 
 
 
-  function GetMap()
-  {
-      map = new Microsoft.Maps.Map('#myMap', {
-          credentials: 'Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd',
-          center: new Microsoft.Maps.Location(47.616343, -122.203177),
-    customMapStyle: {
-        elements: {
-            area: { fillColor: '#ffb6e591' },
-            //water: { fillColor: '#ffffffff' },
-            tollRoad: { fillColor: '#a964f4', strokeColor: '#a964f4' },
-            arterialRoad: { fillColor: '#ffffff', strokeColor: '#d7dae7' },
-            road: { fillColor: '#ffa35a', strokeColor: '#ff9c4f' },
-            street: { fillColor: '#ffffff', strokeColor: '#ffffff' }
-        },
-        settings: {
-            landColor: '#efe9e1'
-        }
-    }
-      });
+//   function GetMap()
+//   {
+//       map = new Microsoft.Maps.Map('myMap', {
+//           credentials: 'Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd',
+//             center: new Microsoft.Maps.Location(47.616343, -122.203177),
+//             customMapStyle: {
+//             elements: {
+//             area: { fillColor: '#ffb6e591' },
+//             //water: { fillColor: '#ffffffff' },
+//             tollRoad: { fillColor: '#a964f4', strokeColor: '#a964f4' },
+//             arterialRoad: { fillColor: '#ffffff', strokeColor: '#d7dae7' },
+//             road: { fillColor: '#ffa35a', strokeColor: '#ff9c4f' },
+//             street: { fillColor: '#ffffff', strokeColor: '#ffffff' }
+//         },
+//         settings: {
+//             landColor: '#efe9e1'
+//         }
+//     }
+//       });
       
-      map.setView({
-       mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-      center: new Microsoft.Maps.Location(52.520008, 13.404954),
-      zoom: 5,
+//       map.setView({
+//        mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+//       center: new Microsoft.Maps.Location(52.520008, 13.404954),
+//       zoom: 5,
      
-    });
+//     });
 
       //Load the directions module.
       Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
@@ -104,7 +110,7 @@ function loadDoc() {
       //  Microsoft.Maps.Events.addHandler(pushpinPostdam, 'click', Truck2);   
       });
 
-  }
+  
 
   function Truck1(){
     TruckSelected = 1;
@@ -342,3 +348,4 @@ var x = setInterval(function() {
 }, 1000);
 
 
+});
