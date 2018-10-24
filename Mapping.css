@@ -25,10 +25,52 @@ html, body{
     justify-content: space-between;
     align-items: center;
 }
-.trucks h3{
+.TruckData h3{
     color: lightblue;
     font-size: 2rem;
 }
+
+
+
+.TruckData > h3 {
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    line-height: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    color: lightblue;
+}
+
+.TruckData > h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+
+.TruckData > h3:active::before {
+    background-color: #000;
+}
+
+.TruckData > h3:hover::before, h3:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+
+
 
 .MappingDiv{
    width: 100%;
@@ -121,7 +163,6 @@ html, body{
 
   
   .area {
-   fill: url(#svgGradient);
-   				
+   fill: url(#svgGradient);				
     stroke-width: 0px;	
   }

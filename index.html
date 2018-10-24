@@ -16,7 +16,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>  
     <link rel="stylesheet" href="index.css">
     <link rel="icon" sizes="256x256" href="img/ICON.svg">
     <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    
     <img src="img/Logo.png" height="80px" style="position: absolute; margin: 40px;">
     <div class="menu">
         <a>Home</a>
@@ -51,14 +52,17 @@
     </div>
 
     <!--************MAPPING ***************** -->
+    <div style="width: 100vw; height: 100vh;">
+        
+       
     <p class="Fleet-Managment-Text" id="Fleet-Managment-Text">Fleet Tracking</p>
     <p style="text-align: center;">World Wide fleet tracking</p>
     <div class="MappingDiv">
         <div class="trucks">
             <p class="Fleet-Managment-Text" style="text-align: center">Deployed Trucks</p>
-            <div class="TruckData" onclick="Truck1()">
+            <div  class="TruckData" onclick="Truck1()"> 
                 <h3> Truck 1</h3>
-                <p>JK 00 25</p>
+                <a>JK 00 25</a>
             </div>
             <div class="TruckData" onclick="Truck2()">
                 <h3> Truck 2</h3>
@@ -131,6 +135,7 @@
         </div>
     </div>
 
+</div>
 
 
 
@@ -158,6 +163,8 @@
                 capasity everytime.</p>
         </div>
     </div>
+
+
 
     <!--Tech Details-->
     <div class="techDetailsImg">
@@ -280,7 +287,7 @@
 
 
 
-
+    
 
 
     <footer style="height: 100vh;"></footer>
@@ -352,6 +359,12 @@ var GpsData2 = [
 
                 //  Microsoft.Maps.Events.addHandler(pushpin, 'click', Truck1); 
                 //  Microsoft.Maps.Events.addHandler(pushpinPostdam, 'click', Truck2);   
+            });
+
+              map.setView({
+            mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+            center: new Microsoft.Maps.Location(52.520008, 13.404954),
+            zoom: 5,
             });
 
         }
@@ -469,20 +482,20 @@ d3.select(document.getElementById("LineChart")).append("svg").attr({
 var gradient = defs.append("linearGradient")
    .attr("id", "svgGradient")
    .attr("x1", "0%")
-   .attr("x2", "100%")
+   .attr("x2", "50%")
    .attr("y1", "0%")
-   .attr("y2", "100%");
+   .attr("y2", "50%");
 
 gradient.append("stop")
    .attr('class', 'start')
    .attr("offset", "0%")
-   .attr("stop-color", "darkblue")
+   .attr("stop-color", "#4fb5fe")
    .attr("stop-opacity", 1);
 
 gradient.append("stop")
    .attr('class', 'end')
    .attr("offset", "100%")
-   .attr("stop-color", "#4fb5fe")
+   .attr("stop-color", "white")
    .attr("stop-opacity", 1);
 
 
@@ -534,11 +547,44 @@ svg.append("g")
     .attr("class","axis")
     .attr("class", "axisRed")
     .call(yAxis);
-
-
 }
 
+ var LineChartTimer = setInterval(function() {
+    let LC = document.getElementById("LineChart");
+    let steve = parseInt(window.getComputedStyle(LC).marginLeft);
+    LC.style.marginLeft = (steve - 2) + "px";
 
+   
+  },100);
+
+
+ var x = setInterval(function() {
+    Mappingi += 1;
+    if (Mappingi > GpsData.length -1)
+    {
+        Mappingi = 0;
+        let LC = document.getElementById("LineChart");
+        let steve = parseInt(window.getComputedStyle(LC).marginLeft);
+        LC.style.marginLeft = 0 + "px";
+    } ;
+
+    if(TruckSelected === 1){
+        
+        document.getElementById("CurrentSpeed").innerHTML = GpsData[i]["speed"] + "Km/h";
+        document.getElementById("DistanceLeft").innerHTML = GpsData[i]["DistanceToGo"] + "Km/h";
+        document.getElementById("OriginHeader").innerHTML ="Berlin";
+        document.getElementById("DestinationHeader").innerHTML ="Paris"; 
+        document.getElementById("PricePerTon").innerHTML = "€2.45"
+    }
+    else if(TruckSelected === 2){
+        document.getElementById("CurrentSpeed").innerHTML = GpsData2[i]["speed"] + "Km/h";
+        document.getElementById("DistanceLeft").innerHTML = GpsData2[i]["DistanceToGo"] + "Km/h";
+        document.getElementById("OriginHeader").innerHTML ="Berlin";
+        document.getElementById("DestinationHeader").innerHTML ="Prauge";
+        document.getElementById("PricePerTon").innerHTML = "€3.15"
+    }
+       
+}, 2000);
 
 
 

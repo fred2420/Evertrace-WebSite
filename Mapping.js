@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
-    document.getElementById('myMap').innerHTML = "found";
+    document.getElementById('myMap').innerHTML = '<object type="image/svg+xml" data="img/Jumping_logo.svg">Your browser does not support SVG</object> <h1 style="text-align: center; margin-top: -30%">Loading</h1>';
   
   
 let Mappingi = 0;
