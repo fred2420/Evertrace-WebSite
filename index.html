@@ -12,21 +12,19 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="TechDetails.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <link rel="stylesheet" href="index.css">
-
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="icon" sizes="256x256" href="img/ICON.svg">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="jquery.easypiechart.js"></script>
 
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <link rel="stylesheet" type="text/css" href="Mapping.css">
-
 </head>
 
 <body>
@@ -62,7 +60,6 @@
                 <h3> Truck 1</h3>
                 <p>JK 00 25</p>
             </div>
-
             <div class="TruckData" onclick="Truck2()">
                 <h3> Truck 2</h3>
                 <h4>AB 45 21</h4>
@@ -74,6 +71,7 @@
         </div>
         <div id="myMap"></div>
     </div>
+
  <!--Stats Viewer  -->
     <div class="StatsViewer">
         <div>
@@ -447,12 +445,11 @@ let TruckSelected = 1;
 };
 
 
+
 function ShowLineChart(){
     document.getElementById("LineChart").innerHTML = "";
 var h = 150;
 var w = 1600;
-
-
 var linefun = d3.svg.line()
 .x(function(d) { return d.Counter * 60; })
 .y(function(d) { return d.speed ;})
@@ -540,9 +537,6 @@ svg.append("g")
 
 
 }
-
-
-
 
 
 
