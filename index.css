@@ -245,10 +245,7 @@ padding-right: 50px;
 }
 
 .Project{
-    background-image: url(img/ImperialTruck.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+   
     height: 100vh;
 }
 
@@ -261,7 +258,16 @@ padding-right: 50px;
     padding-left: 30px;
     padding-right: 30px;  
    display: flex;
-    padding-top: 40px;
+    margin-top: -5%;
+}
+
+.ProjectBoard{
+    width: 50vw;
+    height: 50vh;
+    background-image: url(img/ImperialBoard.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .ProjectText{
