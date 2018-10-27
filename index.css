@@ -251,7 +251,7 @@ padding-right: 50px;
 
 .ProjectCenter{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 50px;
 }
 .ProjectVideo{
@@ -259,6 +259,7 @@ padding-right: 50px;
     padding-right: 30px;  
    display: flex;
     margin-top: -5%;
+    float: right;;
 }
 
 .ProjectBoard{
@@ -278,6 +279,22 @@ padding-right: 50px;
 .ProjectTruck{
     align-content: center;
 }
+
+.ProjectLine{
+    position: absolute; 
+    color: #0EA65C; 
+    background-color:
+    #0EA65C; border-color:
+    #0EA65C; height: 1px; 
+    margin-top: 5%;
+    width:0%;
+    transition: 2s
+  }
+  
+  .ProjectLineBigger{
+    width:35%;
+    transition: 2s
+  }
 
 .Team{
     display:flex;

@@ -54,6 +54,14 @@ new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
+new ScrollMagic.Scene({
+  triggerElement: '.ProjectLine',
+  triggerHook: 0.8
+})
+.setClassToggle('.ProjectLine', 'ProjectLineBigger')
+.addIndicators()
+.addTo(controller);
+
 
 
 
