@@ -125,6 +125,8 @@ padding-right: 50px;
     opacity: 100;
 }
 
+
+
 .SurfacePro{
     display: flex;
     justify-content: center;
@@ -280,12 +282,92 @@ padding-right: 50px;
     align-content: center;
 }
 
+.ProjectFlow{
+    display: flex;
+    width:35%;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+}
+.ProjectFlow p{
+    color: grey;
+    font-size: 2rem;
+    
+ 
+}
+.ProjectInsurance{
+    transition: 1s;
+    padding-left: 0%;
+    padding-right: 0%;
+    opacity: 0;
+}
+
+.ProjectTracking{
+    transition: 1s;
+    padding-left: 0%;
+    padding-right: 0%;
+    opacity: 0;
+}
+.ProjectPayment{
+    transition: 1s;
+    padding-left: 0%;
+    padding-right: 0%;
+    opacity: 0;
+}
+
+.ProjectOnePlatform{
+    transition: 1s;
+    background-image: url(img/OnePlatform.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10vh;
+    width: 10vh;
+    margin-top: 15%;
+    opacity: 0;
+}
+
+.ProjectOnePlatformShow{
+    transition: 2s;
+    padding-left: 30%;
+    padding-right: 30%;
+    opacity: 100;
+    transition-delay: 2s;
+
+}
+
+.ShiftRight{
+    transition: 200;
+    padding-left: 30%;
+    padding-right: 30%;
+    opacity: 100;
+}
+
+.ShiftRightDelay1{
+
+    transition: 400;
+    padding-left: 30%;
+    padding-right: 30%;
+    transition-delay: 1s;
+    opacity: 100;
+}
+
+.ShiftRightDelay2{
+  
+    transition: 600;
+    padding-left: 30%;
+    padding-right: 30%;
+    transition-delay: 2s;
+    opacity: 100;
+}
+
+
+
 .ProjectLine{
     position: absolute; 
-    color: #0EA65C; 
-    background-color:
-    #0EA65C; border-color:
-    #0EA65C; height: 1px; 
+    color: #7085A5; 
+    background-color:#7085A5;
+     border-color:#7085A5; 
+     height: 1px; 
     margin-top: 5%;
     width:0%;
     transition: 2s
@@ -295,6 +377,8 @@ padding-right: 50px;
     width:35%;
     transition: 2s
   }
+
+ 
 
 .Team{
     display:flex;

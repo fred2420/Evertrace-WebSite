@@ -62,6 +62,37 @@ new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
+new ScrollMagic.Scene({
+  triggerElement: '.ProjectInsurance',
+  triggerHook: 0.8
+})
+.setClassToggle('.ProjectInsurance', 'ShiftRight')
+.addIndicators()
+.addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.ProjectTracking',
+  triggerHook: 0.8
+})
+.setClassToggle('.ProjectTracking', 'ShiftRightDelay1')
+.addIndicators()
+.addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.ProjectPayment',
+  triggerHook: 0.8
+})
+.setClassToggle('.ProjectPayment', 'ShiftRightDelay2')
+.addIndicators()
+.addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.ProjectOnePlatform',
+  triggerHook: 0.8
+})
+.setClassToggle('.ProjectOnePlatform', 'ProjectOnePlatformShow')
+.addIndicators()
+.addTo(controller);
 
 
 
