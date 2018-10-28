@@ -16,7 +16,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" sizes="256x256" href="img/Logo.png">
     <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    
+
     <img src="img/Logo.png" height="80px" style="position: absolute; margin: 40px;">
     <div class="menu">
         <a>Home</a>
@@ -53,89 +53,91 @@
 
     <!--************MAPPING ***************** -->
     <div style="width: 100vw; height: 100vh;">
-        
-       
-    <p class="Fleet-Managment-Text" id="Fleet-Managment-Text">Fleet Tracking</p>
-    <p style="text-align: center;">World Wide fleet tracking</p>
-    <div class="MappingDiv">
-        <div class="trucks">
-            <p class="Fleet-Managment-Text" style="text-align: center">Deployed Trucks</p>
-            <div  class="TruckData" onclick="Truck1()"> 
-                <h3> Truck 1</h3>
-                <a>JK 00 25</a>
-            </div>
-            <div class="TruckData" onclick="Truck2()">
-                <h3> Truck 2</h3>
-                <h4>AB 45 21</h4>
-            </div>
-            <div class="TruckData" onclick="Truck2()">
-                <h3> Truck 3</h3>
-                <h4>AB 45 21</h4>
-            </div>
-        </div>
-        <div id="myMap"></div>
-    </div>
 
- <!--Stats Viewer  -->
-    <div class="StatsViewer">
-        <div>
-            <div class="DestinationStats StatsBoxes" style="display: flex;">
-                <div style="margin: 20px">
-                    <h3>Origin</h3>
-                    <br>
-                    <p style="font-size: 2rem; color: grey; margin-top: -2rem; text-align: center" id="OriginHeader"></p>
-                </div>
-                <div style="margin: 20px">
-                    <h3>Destination</h3>
-                    <br>
-                    <p style="font-size: 2rem; color: grey; margin-top: -2rem; text-align: center" id="DestinationHeader"></p>
-                </div>
-            </div>
-            <h3 style="text-align: center">ETA</h3>
-            <p style="font-size: 2rem; color: grey; text-align: center" id="ETA"></p>
-        </div>
-        <!--Current Speed-->
-        <div class="LineChartViewer StatsBoxes" style=" width: 400px;  overflow-x: hidden; padding: 20px">
-            <h3>Current Speed
-                <span id="CurrentSpeed" style="font-size: 2rem; color: grey"></span>
-            </h3>
-            <div class="LineChartAndScale">
-                <img src="img/line.png" style="position: absolute; margin-left: -35px; margin-right: 0px; margin-bottom: 0px; height: 140px;">
-                <div id="LineChart" style="width: 1600px; height: 140px"></div>
-            </div>
-        </div>
-        <!--Weight-->
-        <div class="StatsBoxes">
-            <h3>Current Weight</h3>
-            <div style="display: flex; align-items: center; ">
-                <p id="WeightPercentage" style="font-size: 2rem; color: grey"></p>
-                <div class="Barchart" style="background-color: lightgrey; ">
-                    <div id="WeightBarChart"></div>
-                </div>
-            </div>
-            <h3>Price Per ton</h3>
-            <div style="display: flex; align-items: center; ">
-                <p id="PricePerTon" style="font-size: 2rem; color: grey">70%</p>
-                <div class="Barchart" style="background-color: lightgrey; ">
-                    <div id="PriceBarChart"></div>
-                </div>
-            </div>
-        </div>
-        <!--distance left -->
-        <div>
-            <h3> Distance remaining
-                <span id="DistanceLeft" style="font-size: 2rem; color: grey; margin-top: -2rem;"></span>
-            </h3>
-            <div class="container">
-                <div class="box">
-                    <div id="chart" class="chart" data-percent="50"></div>
-                </div>
-            </div>
-            <p style="font-size: 2rem; color: grey; margin-top: -2rem;" id="DistanceLeftPercentage"></p>
-        </div>
-    </div>
 
-</div>
+        <p class="Fleet-Managment-Text" id="Fleet-Managment-Text">Fleet Tracking</p>
+        <p style="text-align: center;">World Wide fleet tracking</p>
+        <div class="MappingDiv">
+            <div class="trucks">
+                <p class="Fleet-Managment-Text" style="text-align: center">Deployed Trucks</p>
+                <div class="TruckData" onclick="Truck1()">
+                    <h3> Truck 1</h3>
+                    <a>JK 00 25</a>
+                </div>
+                <div class="TruckData" onclick="Truck2()">
+                    <h3> Truck 2</h3>
+                    <h4>AB 45 21</h4>
+                </div>
+                <div class="TruckData" onclick="Truck2()">
+                    <h3> Truck 3</h3>
+                    <h4>AB 45 21</h4>
+                </div>
+            </div>
+            <div id="myMap"></div>
+        </div>
+
+        <!--Stats Viewer  -->
+        <div class="StatsViewer">
+            <div>
+                <div class="DestinationStats StatsBoxes" style="display: flex;">
+                    <div style="margin: 20px">
+                        <h3>Origin</h3>
+                        <br>
+                        <p style="font-size: 2rem; color: grey; margin-top: -2rem; text-align: center" id="OriginHeader"></p>
+                    </div>
+                    <div style="margin: 20px">
+                        <h3>Destination</h3>
+                        <br>
+                        <p style="font-size: 2rem; color: grey; margin-top: -2rem; text-align: center" id="DestinationHeader"></p>
+                    </div>
+                </div>
+                <h3 style="text-align: center">ETA</h3>
+                <p style="font-size: 2rem; color: grey; text-align: center" id="ETA"></p>
+            </div>
+            <!--Current Speed-->
+            <div class="LineChartViewer StatsBoxes" style=" width: 400px;  overflow-x: hidden; padding: 20px">
+                <h3>Current Speed
+                    <span id="CurrentSpeed" style="font-size: 2rem; color: grey"></span>
+                </h3>
+                <div class="LineChartAndScale">
+                    <img src="img/line.png" style="position: absolute; margin-left: -35px; margin-right: 0px; margin-bottom: 0px; height: 140px;">
+                    <div id="LineChart" style="width: 1600px; height: 140px"></div>
+                </div>
+            </div>
+            <!--Weight-->
+            <div class="StatsBoxes">
+                <h3>Current Weight</h3>
+                <div style="display: flex; align-items: center; ">
+                    <p id="WeightPercentage" style="font-size: 2rem; color: grey"></p>
+                    <div class="Barchart" style="background-color: lightgrey; ">
+                        <div id="WeightBarChart"></div>
+                    </div>
+                </div>
+                <h3>Price Per ton</h3>
+                <div style="display: flex; align-items: center; ">
+                    <p id="PricePerTon" style="font-size: 2rem; color: grey">70%</p>
+                    <div class="Barchart" style="background-color: lightgrey; ">
+                        <div id="PriceBarChart"></div>
+                    </div>
+                </div>
+            </div>
+            <!--distance left -->
+            <div>
+                <h3> Distance remaining
+                    <span id="DistanceLeft" style="font-size: 2rem; color: grey; margin-top: -2rem;"></span>
+                </h3>
+                <div class="container">
+                    <div class="box">
+                        <div id="chart" class="chart" data-percent="50">
+                            <p style="font-size: 2rem; color: grey; ;" id="DistanceLeftPercentage"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
 
 
@@ -224,7 +226,7 @@
     <!--Project-->
     <div class="Project">
         <h2 id="ProjectsHead" style="text-align: center; color: #0ea65c; margin-bottom: 100px"> +D Pilot with IMPERIAL</h2>
-       
+
         <div>
 
             <div class="ProjectCenter">
@@ -232,31 +234,30 @@
                     <div class="ProjectBoard">
 
                     </div>
-                 
+
                 </div>
 
                 <div class="ProjectText">
                     <p>Live test sucessfuly completed with Imperial Logistics
-                        </p>
-                    <p>Working with Imperial Logistics to create a 
-                            working Blockchain IOT project. Lorem ipsum
-                            and also other cat realted products</p>
+                    </p>
+                    <p>Working with Imperial Logistics to create a working Blockchain IOT project. Lorem ipsum and also other
+                        cat realted products</p>
                 </div>
             </div>
             <div class="ProjectCenter">
                 <div class="ProjectText">
 
-                        <hr class="ProjectLine" >
-                        <div class="ProjectFlow">
+                    <hr class="ProjectLine">
+                    <div class="ProjectFlow">
                         <p class="ProjectInsurance">Insurance</p>
                         <p class="ProjectTracking">Tracking</p>
                         <p class="ProjectPayment">Payment</p>
-                        </div>
-                        <div class="ProjectOnePlatform"></div>
+                    </div>
+                    <div class="ProjectOnePlatform"></div>
                 </div>
                 <div class="ProjectVideo">
-                        <iframe src="https://player.vimeo.com/video/281636632" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                            allowfullscreen ></iframe>
+                    <iframe src="https://player.vimeo.com/video/281636632" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -282,7 +283,8 @@
         <div id="LebensLaufTitle" class="LebensLaufTitle"></div>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sapiente ratione incidunt distinctio suscipit corporis,
             earum doloribus aspernatur iure! Quidem quia esse placeat maxime commodi! suscipit corporis, earum doloribus
-            aspernatur</p>
+            aspernatur
+        </p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sapiente ratione incidunt distinctio suscipit corporis,
             earum doloribus aspernatur iure! Quidem quia esse placeat maxime commodi! earum doloribus aspernatur iure! Quidem
             quia esse</p>
@@ -295,58 +297,58 @@
 
 
 
-    
+
 
 
     <footer style="height: 100vh;"></footer>
 
     <script type='text/javascript'>
-var GpsData = [
-    {"speed":0.4, "DistanceToGo": 52.3, "Counter": 1 }, 
-    {"speed":1.3, "DistanceToGo": 52.5,"Counter": 2 } ,
-    {"speed":3.8, "DistanceToGo": 52.6 ,"Counter": 3 } ,
-    {"speed":4.1, "DistanceToGo": 52.8 ,"Counter": 4 } ,
-    {"speed":3.4, "DistanceToGo": 52.3, "Counter": 5 }, 
-    {"speed":4.3, "DistanceToGo": 52.5,"Counter": 6 } ,
-    {"speed":1.8, "DistanceToGo": 52.6 ,"Counter": 7 } ,
-    {"speed":2.1, "DistanceToGo": 52.8 ,"Counter": 8 } ,
-    {"speed":83.3, "DistanceToGo": 52.8 ,"Counter": 9 } ,
-    {"speed":83.1, "DistanceToGo": 52.8 ,"Counter": 10 } ,
-    {"speed":84.4, "DistanceToGo": 52.3, "Counter": 11 }, 
-    {"speed":85.3, "DistanceToGo": 52.5,"Counter": 12 } ,
-    {"speed":82.8, "DistanceToGo": 52.6 ,"Counter": 13 } ,
-    {"speed":83.1, "DistanceToGo": 52.8 ,"Counter": 14 } ,
-    {"speed":85.4, "DistanceToGo": 52.3, "Counter": 15 }, 
-    {"speed":82.3, "DistanceToGo": 52.5,"Counter": 16 } ,
-    {"speed":83.8, "DistanceToGo": 52.6 ,"Counter": 17 } ,
-    {"speed":83.1, "DistanceToGo": 52.8 ,"Counter": 18 } ,
-    {"speed":82.4, "DistanceToGo": 52.3, "Counter": 19 }, 
-    {"speed":84.3, "DistanceToGo": 52.5,"Counter": 20 } 
- 
-  ];
+        var GpsData = [
+            { "speed": 0.4, "DistanceToGo": 52.3, "Counter": 1 },
+            { "speed": 1.3, "DistanceToGo": 52.5, "Counter": 2 },
+            { "speed": 3.8, "DistanceToGo": 52.6, "Counter": 3 },
+            { "speed": 4.1, "DistanceToGo": 52.8, "Counter": 4 },
+            { "speed": 3.4, "DistanceToGo": 52.3, "Counter": 5 },
+            { "speed": 4.3, "DistanceToGo": 52.5, "Counter": 6 },
+            { "speed": 1.8, "DistanceToGo": 52.6, "Counter": 7 },
+            { "speed": 2.1, "DistanceToGo": 52.8, "Counter": 8 },
+            { "speed": 83.3, "DistanceToGo": 52.8, "Counter": 9 },
+            { "speed": 83.1, "DistanceToGo": 52.8, "Counter": 10 },
+            { "speed": 84.4, "DistanceToGo": 52.3, "Counter": 11 },
+            { "speed": 85.3, "DistanceToGo": 52.5, "Counter": 12 },
+            { "speed": 82.8, "DistanceToGo": 52.6, "Counter": 13 },
+            { "speed": 83.1, "DistanceToGo": 52.8, "Counter": 14 },
+            { "speed": 85.4, "DistanceToGo": 52.3, "Counter": 15 },
+            { "speed": 82.3, "DistanceToGo": 52.5, "Counter": 16 },
+            { "speed": 83.8, "DistanceToGo": 52.6, "Counter": 17 },
+            { "speed": 83.1, "DistanceToGo": 52.8, "Counter": 18 },
+            { "speed": 82.4, "DistanceToGo": 52.3, "Counter": 19 },
+            { "speed": 84.3, "DistanceToGo": 52.5, "Counter": 20 }
 
-var GpsData2 = [
-    {"speed":1.4, "DistanceToGo": 52.3, "Counter": 1 }, 
-    {"speed":40.3, "DistanceToGo": 52.5,"Counter": 2 } ,
-    {"speed":100.8, "DistanceToGo": 52.6 ,"Counter": 3 } ,
-    {"speed":21.1, "DistanceToGo": 52.8 ,"Counter": 4 } ,
-    {"speed":1.4, "DistanceToGo": 52.3, "Counter": 5 }, 
-    {"speed":40.3, "DistanceToGo": 52.5,"Counter": 6 } ,
-    {"speed":100.8, "DistanceToGo": 52.6 ,"Counter": 7 } ,
-    {"speed":21.1, "DistanceToGo": 52.8 ,"Counter": 8 } ,
-    {"speed":21.1, "DistanceToGo": 52.8 ,"Counter": 9 } ,
-    {"speed":21.1, "DistanceToGo": 52.8 ,"Counter": 10 } ,
-    {"speed":1.4, "DistanceToGo": 52.3, "Counter": 11 }, 
-    {"speed":40.3, "DistanceToGo": 52.5,"Counter": 12 } ,
-    {"speed":100.8, "DistanceToGo": 52.6 ,"Counter": 13 } ,
-    {"speed":21.1, "DistanceToGo": 52.8 ,"Counter": 14 } ,
-    {"speed":1.4, "DistanceToGo": 52.3, "Counter": 15 }, 
-    {"speed":40.3, "DistanceToGo": 52.5,"Counter": 16 } ,
-    {"speed":100.8, "DistanceToGo": 52.6 ,"Counter": 17 } ,
-    {"speed":21.1, "DistanceToGo": 52.8 ,"Counter": 18 } ,
-    {"speed":1.4, "DistanceToGo": 52.3, "Counter": 19 }, 
-    {"speed":40.3, "DistanceToGo": 52.5,"Counter": 20 } 
-  ];
+        ];
+
+        var GpsData2 = [
+            { "speed": 1.4, "DistanceToGo": 52.3, "Counter": 1 },
+            { "speed": 40.3, "DistanceToGo": 52.5, "Counter": 2 },
+            { "speed": 100.8, "DistanceToGo": 52.6, "Counter": 3 },
+            { "speed": 21.1, "DistanceToGo": 52.8, "Counter": 4 },
+            { "speed": 1.4, "DistanceToGo": 52.3, "Counter": 5 },
+            { "speed": 40.3, "DistanceToGo": 52.5, "Counter": 6 },
+            { "speed": 100.8, "DistanceToGo": 52.6, "Counter": 7 },
+            { "speed": 21.1, "DistanceToGo": 52.8, "Counter": 8 },
+            { "speed": 21.1, "DistanceToGo": 52.8, "Counter": 9 },
+            { "speed": 21.1, "DistanceToGo": 52.8, "Counter": 10 },
+            { "speed": 1.4, "DistanceToGo": 52.3, "Counter": 11 },
+            { "speed": 40.3, "DistanceToGo": 52.5, "Counter": 12 },
+            { "speed": 100.8, "DistanceToGo": 52.6, "Counter": 13 },
+            { "speed": 21.1, "DistanceToGo": 52.8, "Counter": 14 },
+            { "speed": 1.4, "DistanceToGo": 52.3, "Counter": 15 },
+            { "speed": 40.3, "DistanceToGo": 52.5, "Counter": 16 },
+            { "speed": 100.8, "DistanceToGo": 52.6, "Counter": 17 },
+            { "speed": 21.1, "DistanceToGo": 52.8, "Counter": 18 },
+            { "speed": 1.4, "DistanceToGo": 52.3, "Counter": 19 },
+            { "speed": 40.3, "DistanceToGo": 52.5, "Counter": 20 }
+        ];
 
 
         var map;
@@ -355,24 +357,36 @@ var GpsData2 = [
                 credentials: 'Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd'
             });
 
+            //Register the custom module.
+            Microsoft.Maps.registerModule('HtmlPushpinLayerModule', 'JS/HtmlPushpinLayerModule.js');
+
+            //Load the module.
+            Microsoft.Maps.loadModule('HtmlPushpinLayerModule', function () {
+                //Create a simple reusable HTML template to keep things easy.
+                var htmlTemplate = '<div style="width:100px;padding:2px;text-align:center;">{text}</div>';
+
+                var pins = [
+                    new HtmlPushpin(new Microsoft.Maps.Location(49.49596, 8.43048), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/wavesvg.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(50, 12)),
+                ];
+
+                var layer = new HtmlPushpinLayer();
+                layer.setPushpins(pins);
+
+                //Add the HTML pushpin to the map.
+                map.layers.insert(layer);
+            });
+
             Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
                 //Create an instance of the directions manager.
                 directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
-                var Postdam = new Microsoft.Maps.Location(52.540008, 13.404954);
-                var pushpinPostdam = new Microsoft.Maps.Pushpin(Postdam, null);
-                map.entities.push(pushpinPostdam);
-
                 var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), null);
                 map.entities.push(pushpin);
-
-                //  Microsoft.Maps.Events.addHandler(pushpin, 'click', Truck1); 
-                //  Microsoft.Maps.Events.addHandler(pushpinPostdam, 'click', Truck2);   
             });
 
-              map.setView({
-            mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-            center: new Microsoft.Maps.Location(52.520008, 13.404954),
-            zoom: 5,
+            map.setView({
+                mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+                center: new Microsoft.Maps.Location(52.520008, 13.404954),
+                zoom: 5,
             });
 
         }
@@ -386,7 +400,7 @@ var GpsData2 = [
             directionsManager.calculateDirections();
             ShowLineChart();
         };
-let TruckSelected = 1;
+        let TruckSelected = 1;
         function Truck1() {
             TruckSelected = 1;
             ShowBarChart(40)
@@ -394,205 +408,204 @@ let TruckSelected = 1;
             document.getElementById("DistanceLeftPercentage").innerHTML = "60%";
             DisplayMap('Berlin', 'Paris');
         }
-        function Truck2(){
-    ShowBarChart(70)
-    ShowPieChart(30);
-    ShowLineChart();
-    document.getElementById("#DistanceLeftPercentage").innerHTML = "30%";
-       TruckSelected = 2;
-       DisplayMap('Berlin', 'Prauge');
-  }
-
-  // Set timer to upload data 
-  let Mappingi = 0;
-  var x = setInterval(function() {
-    Mappingi += 1;
-    if (Mappingi > GpsData.length -1)
-    {
-        Mappingi = 0;
-        let LC = document.getElementById("#LineChart");
-        let steve = parseInt(window.getComputedStyle(LC).marginLeft);
-        LC.style.marginLeft = 0 + "px";
-    } ;
-
-    if(TruckSelected === 1){
-        
-        document.getElementById("CurrentSpeed").innerHTML = GpsData[i]["speed"] + "Km/h";
-        document.getElementById("DistanceLeft").innerHTML = GpsData[i]["DistanceToGo"] + "Km/h";
-        document.getElementById("OriginHeader").innerHTML ="Berlin";
-        document.getElementById("DestinationHeader").innerHTML ="Paris"; 
-        document.getElementById("PricePerTon").innerHTML = "€2.45"
-    }
-    else if(TruckSelected === 2){
-        document.getElementById("CurrentSpeed").innerHTML = GpsData2[i]["speed"] + "Km/h";
-        document.getElementById("DistanceLeft").innerHTML = GpsData2[i]["DistanceToGo"] + "Km/h";
-        document.getElementById("OriginHeader").innerHTML ="Berlin";
-        document.getElementById("DestinationHeader").innerHTML ="Prauge";
-        document.getElementById("PricePerTon").innerHTML = "€3.15"
-    }
-       
-}, 2000);
-
-    function ShowBarChart(weight){
-        let Barchart = document.getElementById('WeightBarChart');
-         Barchart.className = '';
-        if (weight === 70){
-         Barchart.classList.add('WeightBarChart70');
-         document.getElementById('WeightPercentage').innerHTML = "70%";
+        function Truck2() {
+            ShowBarChart(70)
+            ShowPieChart(30);
+            ShowLineChart();
+            document.getElementById("#DistanceLeftPercentage").innerHTML = "30%";
+            TruckSelected = 2;
+            DisplayMap('Berlin', 'Prauge');
         }
-        else if (weight === 40){
-         Barchart.classList.add('WeightBarChart40');
-         document.getElementById('WeightPercentage').innerHTML = "40%";
 
-   }
-}
-    function ShowPieChart(Complete) {
-    $('.chart').easyPieChart({
-        barColor:'blue',
-        size: '220',
-        lineWidth: '24',
-        barColor: function(Complete) {
-            var ctx = this.renderer.getCtx();
-            var canvas = this.renderer.getCanvas();
-            var gradient = ctx.createLinearGradient(0,0,canvas.width,0);
-                  gradient.addColorStop(1, "darkblue");
-                  gradient.addColorStop(0, "#4fb5fe");
-               // gradient.addColorStop(0, "#ffe57e");
-               // gradient.addColorStop(1, "#de5900");
-            return gradient;
-          }
-    });
-    $('.chart').data('easyPieChart').update(Complete);
-};
+        // Set timer to upload data 
+        let Mappingi = 0;
+        var x = setInterval(function () {
+            Mappingi += 1;
+            if (Mappingi > GpsData.length - 1) {
+                Mappingi = 0;
+                let LC = document.getElementById("#LineChart");
+                let steve = parseInt(window.getComputedStyle(LC).marginLeft);
+                LC.style.marginLeft = 0 + "px";
+            };
 
+            if (TruckSelected === 1) {
 
+                document.getElementById("CurrentSpeed").innerHTML = GpsData[i]["speed"] + "Km/h";
+                document.getElementById("DistanceLeft").innerHTML = GpsData[i]["DistanceToGo"] + "Km/h";
+                document.getElementById("OriginHeader").innerHTML = "Berlin";
+                document.getElementById("DestinationHeader").innerHTML = "Paris";
+                document.getElementById("PricePerTon").innerHTML = "€2.45"
+            }
+            else if (TruckSelected === 2) {
+                document.getElementById("CurrentSpeed").innerHTML = GpsData2[i]["speed"] + "Km/h";
+                document.getElementById("DistanceLeft").innerHTML = GpsData2[i]["DistanceToGo"] + "Km/h";
+                document.getElementById("OriginHeader").innerHTML = "Berlin";
+                document.getElementById("DestinationHeader").innerHTML = "Prauge";
+                document.getElementById("PricePerTon").innerHTML = "€3.15"
+            }
 
-function ShowLineChart(){
-    document.getElementById("LineChart").innerHTML = "";
-var h = 150;
-var w = 1600;
-var linefun = d3.svg.line()
-.x(function(d) { return d.Counter * 60; })
-.y(function(d) { return d.speed ;})
-.interpolate("linear");
+        }, 2000);
 
-var area = d3.svg.area()
-    .x(function(d) { return d.Counter * 60; })
-    .y0(h)
-    .y1(function(d) { return d.speed ;})
+        function ShowBarChart(weight) {
+            let Barchart = document.getElementById('WeightBarChart');
+            Barchart.className = '';
+            if (weight === 70) {
+                Barchart.classList.add('WeightBarChart70');
+                document.getElementById('WeightPercentage').innerHTML = "70%";
+            }
+            else if (weight === 40) {
+                Barchart.classList.add('WeightBarChart40');
+                document.getElementById('WeightPercentage').innerHTML = "40%";
 
-var svg = 
-d3.select(document.getElementById("LineChart")).append("svg").attr({
-    width:w, height:h});
-
-    var defs = svg.append("defs");
-
-var gradient = defs.append("linearGradient")
-   .attr("id", "svgGradient")
-   .attr("x1", "0%")
-   .attr("x2", "50%")
-   .attr("y1", "0%")
-   .attr("y2", "50%");
-
-gradient.append("stop")
-   .attr('class', 'start')
-   .attr("offset", "0%")
-   .attr("stop-color", "#4fb5fe")
-   .attr("stop-opacity", 1);
-
-gradient.append("stop")
-   .attr('class', 'end')
-   .attr("offset", "100%")
-   .attr("stop-color", "white")
-   .attr("stop-opacity", 1);
+            }
+        }
+        function ShowPieChart(Complete) {
+            $('.chart').easyPieChart({
+                barColor: 'blue',
+                size: '220',
+                lineWidth: '24',
+                barColor: function (Complete) {
+                    var ctx = this.renderer.getCtx();
+                    var canvas = this.renderer.getCanvas();
+                    var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+                    gradient.addColorStop(1, "darkblue");
+                    gradient.addColorStop(0, "#4fb5fe");
+                    // gradient.addColorStop(0, "#ffe57e");
+                    // gradient.addColorStop(1, "#de5900");
+                    return gradient;
+                }
+            });
+            $('.chart').data('easyPieChart').update(Complete);
+        };
 
 
-    svg.append("path")
-    .datum(GpsData)
-    .attr("class", "area")
-    .attr("d", area);
 
-   
+        function ShowLineChart() {
+            document.getElementById("LineChart").innerHTML = "";
+            var h = 150;
+            var w = 1600;
+            var linefun = d3.svg.line()
+                .x(function (d) { return d.Counter * 60; })
+                .y(function (d) { return d.speed; })
+                .interpolate("linear");
 
-var viz =svg.append("path")
-.attr({
-    d: linefun(GpsData),
-    "stroke": "url(#svgGradient)",
-    "stroke-width": 2,
-    "fill": "none"
-    });
+            var area = d3.svg.area()
+                .x(function (d) { return d.Counter * 60; })
+                .y0(h)
+                .y1(function (d) { return d.speed; })
 
-  
+            var svg =
+                d3.select(document.getElementById("LineChart")).append("svg").attr({
+                    width: w, height: h
+                });
 
-     
+            var defs = svg.append("defs");
 
-//.attr("class", "area")
-    var x = d3.scale.ordinal()
-	.domain([0,1,2,3,4,5])
-    .rangeBands([0,w]);
-    
-    var y = d3.scale.linear()
-	.domain([0,100])
-    .range([h ,0]);
+            var gradient = defs.append("linearGradient")
+                .attr("id", "svgGradient")
+                .attr("x1", "0%")
+                .attr("x2", "50%")
+                .attr("y1", "0%")
+                .attr("y2", "50%");
 
-    var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom")
-    .ticks(10);
+            gradient.append("stop")
+                .attr('class', 'start')
+                .attr("offset", "0%")
+                .attr("stop-color", "#4fb5fe")
+                .attr("stop-opacity", 1);
 
-    var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
-    .ticks(5);
-
-svg.append("g")
-    .attr("transform", "translate(0,100)")
-    .attr("class","axis")
-    .call(xAxis);
-    
-svg.append("g")
-    .attr("transform", "translate( 0 , 0)")
-    .attr("class","axis")
-    .attr("class", "axisRed")
-    .call(yAxis);
-}
-
- var LineChartTimer = setInterval(function() {
-    let LC = document.getElementById("LineChart");
-    let steve = parseInt(window.getComputedStyle(LC).marginLeft);
-    LC.style.marginLeft = (steve - 2) + "px";
-
-   
-  },100);
+            gradient.append("stop")
+                .attr('class', 'end')
+                .attr("offset", "100%")
+                .attr("stop-color", "white")
+                .attr("stop-opacity", 1);
 
 
- var x = setInterval(function() {
-    Mappingi += 1;
-    if (Mappingi > GpsData.length -1)
-    {
-        Mappingi = 0;
-        let LC = document.getElementById("LineChart");
-        let steve = parseInt(window.getComputedStyle(LC).marginLeft);
-        LC.style.marginLeft = 0 + "px";
-    } ;
+            svg.append("path")
+                .datum(GpsData)
+                .attr("class", "area")
+                .attr("d", area);
 
-    if(TruckSelected === 1){
-        
-        document.getElementById("CurrentSpeed").innerHTML = GpsData[i]["speed"] + "Km/h";
-        document.getElementById("DistanceLeft").innerHTML = GpsData[i]["DistanceToGo"] + "Km/h";
-        document.getElementById("OriginHeader").innerHTML ="Berlin";
-        document.getElementById("DestinationHeader").innerHTML ="Paris"; 
-        document.getElementById("PricePerTon").innerHTML = "€2.45"
-    }
-    else if(TruckSelected === 2){
-        document.getElementById("CurrentSpeed").innerHTML = GpsData2[i]["speed"] + "Km/h";
-        document.getElementById("DistanceLeft").innerHTML = GpsData2[i]["DistanceToGo"] + "Km/h";
-        document.getElementById("OriginHeader").innerHTML ="Berlin";
-        document.getElementById("DestinationHeader").innerHTML ="Prauge";
-        document.getElementById("PricePerTon").innerHTML = "€3.15"
-    }
-       
-}, 2000);
+
+
+            var viz = svg.append("path")
+                .attr({
+                    d: linefun(GpsData),
+                    "stroke": "url(#svgGradient)",
+                    "stroke-width": 2,
+                    "fill": "none"
+                });
+
+
+
+
+
+            //.attr("class", "area")
+            var x = d3.scale.ordinal()
+                .domain([0, 1, 2, 3, 4, 5])
+                .rangeBands([0, w]);
+
+            var y = d3.scale.linear()
+                .domain([0, 100])
+                .range([h, 0]);
+
+            var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom")
+                .ticks(10);
+
+            var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left")
+                .ticks(5);
+
+            svg.append("g")
+                .attr("transform", "translate(0,100)")
+                .attr("class", "axis")
+                .call(xAxis);
+
+            svg.append("g")
+                .attr("transform", "translate( 0 , 0)")
+                .attr("class", "axis")
+                .attr("class", "axisRed")
+                .call(yAxis);
+        }
+
+        var LineChartTimer = setInterval(function () {
+            let LC = document.getElementById("LineChart");
+            let steve = parseInt(window.getComputedStyle(LC).marginLeft);
+            LC.style.marginLeft = (steve - 2) + "px";
+
+
+        }, 100);
+
+
+        var x = setInterval(function () {
+            Mappingi += 1;
+            if (Mappingi > GpsData.length - 1) {
+                Mappingi = 0;
+                let LC = document.getElementById("LineChart");
+                let steve = parseInt(window.getComputedStyle(LC).marginLeft);
+                LC.style.marginLeft = 0 + "px";
+            };
+
+            if (TruckSelected === 1) {
+
+                document.getElementById("CurrentSpeed").innerHTML = GpsData[i]["speed"] + "Km/h";
+                document.getElementById("DistanceLeft").innerHTML = GpsData[i]["DistanceToGo"] + "Km/h";
+                document.getElementById("OriginHeader").innerHTML = "Berlin";
+                document.getElementById("DestinationHeader").innerHTML = "Paris";
+                document.getElementById("PricePerTon").innerHTML = "€2.45"
+            }
+            else if (TruckSelected === 2) {
+                document.getElementById("CurrentSpeed").innerHTML = GpsData2[i]["speed"] + "Km/h";
+                document.getElementById("DistanceLeft").innerHTML = GpsData2[i]["DistanceToGo"] + "Km/h";
+                document.getElementById("OriginHeader").innerHTML = "Berlin";
+                document.getElementById("DestinationHeader").innerHTML = "Prauge";
+                document.getElementById("PricePerTon").innerHTML = "€3.15"
+            }
+
+        }, 2000);
 
 
 
