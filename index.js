@@ -94,6 +94,30 @@ new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
+new ScrollMagic.Scene({
+  triggerElement: '.ProjectWhiteCover',
+  triggerHook: 0.8
+})
+.setClassToggle('.ProjectWhiteCover', 'ProjectWhiteCoverreveal')
+.addIndicators()
+.addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.ProjectWhiteCover1',
+  triggerHook: 0.8
+})
+.setClassToggle('.ProjectWhiteCover1', 'ProjectWhiteCover1reveal')
+.addIndicators()
+.addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: '.ProjectWhiteCover2',
+  triggerHook: 0.8
+})
+.setClassToggle('.ProjectWhiteCover2', 'ProjectWhiteCover2reveal')
+.addIndicators()
+.addTo(controller);
+
 
 
 
