@@ -5,7 +5,7 @@
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: 'AfterEffects/data3.json'
+      path: '/AfterEffects/data3.json'
     })
   
 
