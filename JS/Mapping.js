@@ -48,11 +48,39 @@ var GpsData2 = [
 ];
 
 
-var map;
+
 function GetMap() {
     map = new Microsoft.Maps.Map('#myMap', {
         credentials: 'Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd'
     });
+
+    SmallMap = new Microsoft.Maps.Map('#SmallMap', {
+        credentials: 'Ap-rYkxddKIJj0aTnUwot7dfHj98aomVnrq7SUie4oNnnzgpCANowuvTHUnEI5kd',
+        center: new Microsoft.Maps.Location(47.616343, -122.203177),
+        customMapStyle: {
+            elements: {
+                area: { fillColor: '#b6e591' },
+                water: { fillColor: '#75cff0' },
+                tollRoad: { fillColor: '#ffffff', strokeColor: '#ffffff' },
+                arterialRoad: { fillColor: '#ffffff', strokeColor: '#ffffff' },
+                road: { fillColor: '#ffffff', strokeColor: '#ffffff' },
+                street: { fillColor: '#ffffff', strokeColor: '#ffffff' },
+                transit: { fillColor: '#000000' }
+            },
+            settings: {
+                landColor: '#ffffff'
+            }
+        }
+    });
+
+    SmallMap.setView({
+        
+        center: new Microsoft.Maps.Location(52.520008, 13.404954),
+        zoom: 5,
+        showScalebar: false,
+    });
+
+    
 
     //Register the custom module.
     Microsoft.Maps.registerModule('HtmlPushpinLayerModule', 'JS/HtmlPushpinLayerModule.js');
@@ -75,6 +103,7 @@ function GetMap() {
         map.layers.insert(layer);
     });
 
+
     Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
         //Create an instance of the directions manager.
         directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
@@ -88,9 +117,15 @@ function GetMap() {
         zoom: 5,
     });
 
+
+
 }
+
+
+
+
 function DisplayMap(origin, destination) {
-    directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
+    directionsManager = new Microsoft.Maps.Directions.DirectionsManager(SmallMap);
     var waypoint1 = new Microsoft.Maps.Directions.Waypoint({ address: origin });
     directionsManager.addWaypoint(waypoint1);
 
@@ -131,15 +166,11 @@ var x = setInterval(function () {
 
         document.getElementById("CurrentSpeed").innerHTML = GpsData[Mappingi]["speed"] + "Km/h";
         document.getElementById("DistanceLeft").innerHTML = GpsData[Mappingi]["DistanceToGo"] + "Km/h";
-        document.getElementById("OriginHeader").innerHTML = "Berlin";
-        document.getElementById("DestinationHeader").innerHTML = "Paris";
         document.getElementById("PricePerTon").innerHTML = "€2.45"
     }
     else if (TruckSelected === 2) {
         document.getElementById("CurrentSpeed").innerHTML = GpsData2[Mappingi]["speed"] + "Km/h";
         document.getElementById("DistanceLeft").innerHTML = GpsData2[Mappingi]["DistanceToGo"] + "Km/h";
-        document.getElementById("OriginHeader").innerHTML = "Berlin";
-        document.getElementById("DestinationHeader").innerHTML = "Prauge";
         document.getElementById("PricePerTon").innerHTML = "€3.15"
     }
 
@@ -292,15 +323,13 @@ var x = setInterval(function () {
 
         document.getElementById("CurrentSpeed").innerHTML = GpsData[Mappingi]["speed"] + "Km/h";
         document.getElementById("DistanceLeft").innerHTML = GpsData[Mappingi]["DistanceToGo"] + "Km/h";
-        document.getElementById("OriginHeader").innerHTML = "Berlin";
-        document.getElementById("DestinationHeader").innerHTML = "Paris";
+      
         document.getElementById("PricePerTon").innerHTML = "€2.45"
     }
     else if (TruckSelected === 2) {
         document.getElementById("CurrentSpeed").innerHTML = GpsData2[Mappingi]["speed"] + "Km/h";
         document.getElementById("DistanceLeft").innerHTML = GpsData2[Mappingi]["DistanceToGo"] + "Km/h";
-        document.getElementById("OriginHeader").innerHTML = "Berlin";
-        document.getElementById("DestinationHeader").innerHTML = "Prauge";
+  
         document.getElementById("PricePerTon").innerHTML = "€3.15"
     }
 

@@ -83,14 +83,11 @@ html, body{
     flex-direction: column;
 }
 
-
-
 .StatsViewer{
     display: flex;
     justify-content: space-evenly;
+    width: 100vw;
 }
-
-
 
 .Barchart{
     height: 3px;
@@ -149,6 +146,7 @@ html, body{
     padding: 20px;
     border: black;
     border-width: 2px;
+
   }
   
   .StatsBoxes p{

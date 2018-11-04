@@ -3,7 +3,7 @@
     
     width: 100vw;
     height: 56.25vw;
-    background-image: url(img/TechDetails.png);
+    /*background-image: url(img/TechDetails.png);*/
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -82,7 +82,7 @@
     display: block;
     height: 100%;
     width: 100%;
-    color: white;
+    color: black;
     text-align: center;
     font-weight: bold;
     position: absolute;
@@ -118,17 +118,17 @@
 }
 
 .test1{
-  color: white;
+  color: black;
   opacity: 0;
 }
 
 .visable{
-  color: white;
+  color: black;
   opacity: 100;
   transition: 2s
 }
 .TechDetailsContent{
-  color: white;
+  color: black;
   font-weight: 400;
 }
 
