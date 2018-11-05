@@ -1,5 +1,23 @@
 document.getElementById('myMap').innerHTML = '<object type="image/svg+xml" data="img/Jumping_logo.svg">Your browser does not support SVG</object> <h1 style="text-align: center; margin-top: -30%">Loading</h1>';
  
+class Truck {
+
+    constructor(Lat, Long) {
+      this.Lat = Lat;
+      this.Long = Long;
+    }
+  
+    Test() {
+      alert(this.Lat);
+    }
+  }
+
+  let truck1 = new Truck(49.49596,8.43048 );
+  let truck2 = new Truck(48.49596,8.43048 );
+
+
+
+
 var GpsData = [
     { "speed": 0.4, "DistanceToGo": 52.3, "Counter": 1 },
     { "speed": 1.3, "DistanceToGo": 52.5, "Counter": 2 },
@@ -80,19 +98,17 @@ function GetMap() {
         showScalebar: false,
     });
 
-    
 
     //Register the custom module.
     Microsoft.Maps.registerModule('HtmlPushpinLayerModule', 'JS/HtmlPushpinLayerModule.js');
-
     //Load the module.
     Microsoft.Maps.loadModule('HtmlPushpinLayerModule', function () {
         //Create a simple reusable HTML template to keep things easy.
         var htmlTemplate = '<div style="width:20px;padding:2px;text-align:center;">{text}</div>';
 
         var pins = [
-            new HtmlPushpin(new Microsoft.Maps.Location(49.49596, 8.43048), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/PuppleTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(10, 10)),
-            new HtmlPushpin(new Microsoft.Maps.Location(48.49596, 8.43048), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/BlueTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(10, 10)),
+            new HtmlPushpin(new Microsoft.Maps.Location(truck1.Lat, truck1.Long), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/PuppleTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(10, 10)),
+            new HtmlPushpin(new Microsoft.Maps.Location(truck2.Lat, truck2.Long), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/BlueTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(10, 10)),
             new HtmlPushpin(new Microsoft.Maps.Location(48.49596, 9.43048), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/OrangeTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(10, 10)),
         ];
 
@@ -111,17 +127,16 @@ function GetMap() {
         map.entities.push(pushpin);
     });
 
-    map.setView({
-        mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-        center: new Microsoft.Maps.Location(52.520008, 13.404954),
-        zoom: 5,
-    });
-
-
-
+    SetMapView(49.49596, 8.43048 , 5 );
 }
 
-
+function SetMapView(Lat,Long,Zoom){
+map.setView({
+    mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+    center: new Microsoft.Maps.Location(Lat, Long),
+    zoom: Zoom,
+});
+}
 
 
 function DisplayMap(origin, destination) {
@@ -135,18 +150,22 @@ function DisplayMap(origin, destination) {
     ShowLineChart();
 };
 let TruckSelected = 1;
+
 function Truck1() {
     TruckSelected = 1;
+    SetMapView(truck1.Lat, truck1.Long , 12 );
     ShowBarChart(40)
     ShowPieChart(60);
     document.getElementById("DistanceLeftPercentage").innerHTML = "60%";
     DisplayMap('Berlin', 'Paris');
 }
 function Truck2() {
+    SetMapView(truck2.Lat, truck2.Long , 12  );
+
     ShowBarChart(70)
     ShowPieChart(30);
     ShowLineChart();
-    document.getElementById("#DistanceLeftPercentage").innerHTML = "30%";
+    document.getElementById("DistanceLeftPercentage").innerHTML = "30%";
     TruckSelected = 2;
     DisplayMap('Berlin', 'Prauge');
 }
