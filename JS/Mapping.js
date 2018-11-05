@@ -153,14 +153,14 @@ let TruckSelected = 1;
 
 function Truck1() {
     TruckSelected = 1;
-    SetMapView(truck1.Lat, truck1.Long , 12 );
+    SetMapView(truck1.Lat, truck1.Long , 15 );
     ShowBarChart(40)
     ShowPieChart(60);
     document.getElementById("DistanceLeftPercentage").innerHTML = "60%";
     DisplayMap('Berlin', 'Paris');
 }
 function Truck2() {
-    SetMapView(truck2.Lat, truck2.Long , 12  );
+    SetMapView(truck2.Lat, truck2.Long , 15  );
 
     ShowBarChart(70)
     ShowPieChart(30);
