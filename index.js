@@ -11,7 +11,6 @@ new ScrollMagic.Scene({
   triggerHook: .7
 })
 .setClassToggle('.Truck-Top', 'show')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -19,7 +18,6 @@ new ScrollMagic.Scene({
   triggerHook: .7
 })
 .setClassToggle('.Truck-Text', 'show')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -27,7 +25,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.97
 })
 .setClassToggle('.Fleet-Managment-Text', 'PopUp')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -35,7 +32,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.97
 })
 .setClassToggle('.Wheel', 'MoveWheel')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -43,7 +39,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.5
 })
 .setClassToggle('.test1', 'visable')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -51,7 +46,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.5
 })
 .setClassToggle('.WhiteLine', 'WhiteLineBigger')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -59,7 +53,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.8
 })
 .setClassToggle('.ProjectLine', 'ProjectLineBigger')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -67,7 +60,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.8
 })
 .setClassToggle('.ProjectInsurance', 'ShiftRight')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -75,7 +67,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.8
 })
 .setClassToggle('.ProjectTracking', 'ShiftRightDelay1')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -83,7 +74,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.8
 })
 .setClassToggle('.ProjectPayment', 'ShiftRightDelay2')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -91,7 +81,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.8
 })
 .setClassToggle('.ProjectOnePlatform', 'ProjectOnePlatformShow')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -99,7 +88,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.8
 })
 .setClassToggle('.ProjectWhiteCover', 'ProjectWhiteCoverreveal')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -107,7 +95,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.8
 })
 .setClassToggle('.ProjectWhiteCover1', 'ProjectWhiteCover1reveal')
-.addIndicators()
 .addTo(controller);
 
 new ScrollMagic.Scene({
@@ -115,7 +102,6 @@ new ScrollMagic.Scene({
   triggerHook: 0.8
 })
 .setClassToggle('.ProjectWhiteCover2', 'ProjectWhiteCover2reveal')
-.addIndicators()
 .addTo(controller);
 
 
