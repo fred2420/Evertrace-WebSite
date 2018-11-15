@@ -183,6 +183,56 @@
                 sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam
                 rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus
                 eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+                <h3 href="#" id="SQLServerHeader">Setting Up SQL Server to work with Laravel</h3>
+                <ol>
+                    <li>
+                <p>First off we need to install the driver for SQL server for PHP which can be downloaded below </p>
+                <a>https://www.microsoft.com/en-nz/download/details.aspx?id=20098</a>
+            </li>
+                    <li>
+                <p>Running this exe will add a load of dlls into a folder of your choice the folder dose not matter at this point Copy the two DLLs below </p>
+
+                <p style="color: blue">php_pdo_sqlsrv_7_nts_x64.dll</p>
+                <p style="color: blue">php_sqlsrv_7_ts_x64.dll</p>
+            </li>
+                <li><p> Paste these dll in C:\Bitnami\wampstack-7.1.22-0\php\ext</p></li>
+                <li> <p>Open the PHP ini file one level up at C:\Bitnami\wampstack-7.1.22-0\php</p></li>
+
+                <li>
+                    <p>Paste names of the dlls into the ini file </p>
+                    <img src="img/Software/Extension-notepad.png">
+                </li>
+                <li><p> Restart Wamp Server</p></li>
+               
+                <li>
+                    <p> One more configuration copy the below code, you may need to change the config/database.php and add the following or it may be already there </p>
+                     <div class="code">
+                            <p>'sqlsrv' => [</p>
+                            <p>'driver' => 'sqlsrv',</p>
+                            <p>'host' => env('DB_HOST', 'localhost'),</p>
+                            <p>'database' => env('DB_DATABASE', 'forge'),</p>
+                            <p>'username' => env('DB_USERNAME', 'forge'),</p>
+                           <p> 'password' => env('DB_PASSWORD', ''),</p>
+                            <p>'charset' => 'utf8',</p>
+                            <p>'prefix' => '',</p>
+                        <p>],</p>
+                    </div>
+                </li>
+
+
+                <li>
+                    <p> Open the .env file on the top level of the laravel project and change the conection string of the DB</p>
+                    <div class="code">
+                        <p>DB_CONNECTION=sqlsrv</p>
+                        <p>DB_HOST=traceone.database.windows.net</p>
+                        <p>DB_PORT=1433</p>
+                        <p>DB_DATABASE=TraceOneTest</p>
+                        <p>DB_USERNAME=Steve</p>
+                        <p>DB_PASSWORD=********</p>
+                    </div>
+                </li>
+            </ol>
+
 
             <h3 href="#" id="APISetupHeader">Setting Up a Basic API</h3>
 
