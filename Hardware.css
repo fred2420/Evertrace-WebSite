@@ -101,3 +101,12 @@ padding-right: 50px;
     transform-origin: left top;
     transform: scale(1, 1);
 }
+
+.BoardItems{
+    position: relative;
+}
+.BoardItems img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

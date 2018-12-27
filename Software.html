@@ -165,20 +165,24 @@
             </p>
             <img src="img/Software/ChooseComposer.png" style="width: 80%">
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus
-                animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus
-                sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi
-                explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam
-                sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam
-                rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus
-                eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus
-                animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus
-                sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi
-                explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam
-                sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam
-                rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus
-                eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+            <h4>Configure Environment Variables</h4>
+            <p>
+                There is a range of differences between how Azure servers work compared to your typical Apache on Linux servers. One of which
+                is that Azure serves out your web app from its wwwroot unlike public_html on Apache servers. However, Laravel
+                is not a fan of this style so in order to get Laravel to work we need to tweak some settings.
+            </p>
+            <p>
+                Go to Application Settings, scroll down to App settings and enter SCM_REPOSITORY_PATH with the value ..\repository Also enter
+                SCM_TARGET_PATH with the value .. On the same page, go down to Virtual applications and directories and change
+                the public directory value from site\wwwroot to site\public
+            </p>
+
+            <img src="img/Software/AppSettings.png" style="width: 80%">
+            <img src="img/Software/VirtualApplication.png" style="width: 80%">
+            <h4>Configure Deployment Settings</h4>
+            <p>Now lets setup the Deployment option. Go to the DEPLOYMENT section and click on Deployment Options. Select your
+                Remote Git Provider (Note, you can also deploy directly from your local git repo), so i select Bitbucket
+                and authorize it by entering my username and password.</p>
             <h3 href="#" id="SQLServerHeader">Setting Up SQL Server to work with Laravel</h3>
             <ol>
                 <li>
@@ -265,6 +269,12 @@
 
             <h4>Getting Data from the API</h4>
 
+            <p>The data comming from the API will be in a key value pair, this need to be converted into a proper array to make
+                a line chart </p>
+            <p>Example below</p>
+            <div class="code">
+                <p>{"House1":0,"House2":-17,"House3":0,"House4":-37,"House5":-17,"House6":0}</p>
+            </div>
             <div class="code">
                 <p> $.getJSON('http://traceoneapi.azurewebsites.net/*router to the controller*',function(data){</p>
                 <p>var processed_json = new Array();</p>
@@ -275,6 +285,96 @@
                 <p>});</p>
                 <p>})</p>
             </div>
+
+
+
+
+            <h4>Making the line chart</h4>
+            <p>To make the a line chart first Import the high chart libary from a cdn</p>
+            <div class="code">
+            <code> 
+            <p>&lt;script src="https://code.highcharts.com/highcharts.src.js">&lt; / script ></p>
+            </code>
+        </div>
+
+
+        <p> Next Create div to hold the line graph</p>
+
+        <div class="code">
+                &lt;div id="LineChart1" style="width: 400px; height: 200px;"&gt;  
+        </div>
+
+        <p>Next lets make a class called LineChart, to make a new line chart make a new instance of the class then call the CreateLineChart function</p>
+
+      <div class="code">
+          <p class="codeComment">// makes new instance of the LineChart class called LC, passing 2 params first the inital value in the line chart second the ID of the div to place it in</p>
+           <p> let LC = new LineChart(57,'LineChart1');</p>
+           <p class="codeComment">// call the CreateLineChart method</p>
+            <p>LC.CreateLineChart();</p>
+      </div>
+
+            <p>Adding the CLass </p>
+            <div class="code">
+                <p>class LineChart {</p>
+                <p> CreateLineChart() {</p>
+                <p> var self = this;</p>
+                <p> var options = {</p>
+                <p> chart: {</p>
+                <p> events: {</p>
+                <p>load: function () {</p>
+                <p class="codeComment"> // this.UpdateChart</p>
+                <p>self.UpdateChart();</p>
+                <p class="codeComment"> // set up the updating of the chart each second</p>
+                <p>var series = this.series[0];</p>
+                <p> setInterval(function () {</p>
+                <p>var x = (new Date()).getTime(), // current time</p>
+                <p>y = Math.round(Math.random() * 100);</p>
+                <p class="codeComment">// console.log("Im here " + this.UpdateChart() ) ;</p>
+                <p>series.addPoint([x, self.UpdateChart()], true, true);</p>
+                <p>}, 1000);</p>
+                <p>}</p>
+                <p>},</p>
+
+
+                <p>renderTo: self.MountTo,</p>
+                <p> type: 'spline',</p>
+                <p> backgroundColor: 'rgba(0, 4, 19, 0.75)',</p>
+                <p>},</p>
+                <p> legend: {</p>
+                <p>enabled: true</p>
+                <p>},</p>
+                <p>title: {</p>
+                <p>text: "",</p>
+                <p>align: 'center'</p>
+                <p>},</p>
+                <p>yAxis:{</p>
+                <p>},</p>
+                <p>xAxis: {</p>
+                <p>type: "category",</p>
+                <p>categories: [1,2,3,4,5],</p>
+                <p>labels: {</p>
+                <p>enabled: false</p>
+                <p>}</p>
+                <p>},</p>
+                <p> series: [{</p>
+                <p> data: [7, 5, 3, 4, 5]</p>
+                <p>}]</p>
+                <p>};</p>
+                <p>var chart = new Highcharts.chart(options);</p>
+                <p> }</p>
+                <p>}</p>
+            </div>
+
+
+
+            <p>
+                //Create the XHR Object let xhr = new XMLHttpRequest; //Call the open function, GET-type of request, url, true-asynchronous
+                xhr.open('GET', '../public/api/suncontroller/' + start, true) //call the onload xhr.onload = function ()
+                { //check if the status is 200(means everything is okay) if (this.status === 200) { let Sunnyness = new StatsViewer();
+                let CurrentWeather = Sunnyness.FormatedSunHtml(this.responseText); document.getElementById('weather').innerHTML
+                = CurrentWeather; console.log(CurrentWeather); //return server response as an object with JSON.parse } }
+                //call send xhr.send();
+            </p>
 
 
             <h3 href="#" id="BingMapsHeader">Bing Maps</h3>
