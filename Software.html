@@ -69,20 +69,32 @@
             <h2 href="#" id="CloudHeader">Cloud</h2>
             <img src="img/AzureDiagram.png" style="width: 80%">
             <h3 href="#" id="IOTHubHeader">IOT HUB</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus
-                animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus
-                sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi
-                explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam
-                sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam
-                rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus
-                eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus
-                animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus
-                sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi
-                explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam
-                sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam
-                rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus
-                eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
+
+            <p>In a browser, navigate to the Azure Portal. </p>
+            <ol>
+                <li>Click on the New menu option in the upper-left</li>
+                <li> Select Internet of Things</li>
+                <li> Select Azure IoT Hub </li>
+                <li> Give it a name such as your name followed by ‘iot-labs' (i.e. sesam-iot-labs) </li>
+                <li> Select or create a new Resource Group 6. Select a location (choose the one closest to your physical location)</li>
+            </ol>
+            <img src="img/Software/IOTHub1.png" style="width: 80%">
+
+            <p>Remember to pick the pricing option (i.e free) you want. </p>
+
+            <p>To create a device simple go into the IOT hub you just created click device explorer and then add</p>
+            <img src="img/Software/IOTHub2.png" style="width: 80%">
+            <h4>Using Postman </h4>
+            <p>Postman is program designed to send Get and post requests (along with others). It is used for testing.</p>
+            <p> Download postman https://www.getpostman.com/ </p>
+            <p> To post into IOT hub we need a to make a correct post request.</p>
+            <p>We need a few things from Azure iot hub first. </p>
+            <p>First is the URL </p>
+            <p>this is made</p>
+            <p>https://{IOT Hub name}.azure-devices.net/devices/{your device}/messages/events?api-version=2016-02-03 </p>
+            <p>the api version is at first confusing, it seams as though it should variable but it is not. it remains static
+                at version=2016-02-03 </p>
+
 
             <h3 href="#" id="SqlServerHeader">Sql Server</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus
@@ -292,26 +304,28 @@
             <h4>Making the line chart</h4>
             <p>To make the a line chart first Import the high chart libary from a cdn</p>
             <div class="code">
-            <code> 
+                <code> 
             <p>&lt;script src="https://code.highcharts.com/highcharts.src.js">&lt; / script ></p>
             </code>
-        </div>
+            </div>
 
 
-        <p> Next Create div to hold the line graph</p>
+            <p> Next Create div to hold the line graph</p>
 
-        <div class="code">
-                &lt;div id="LineChart1" style="width: 400px; height: 200px;"&gt;  
-        </div>
+            <div class="code">
+                &lt;div id="LineChart1" style="width: 400px; height: 200px;"&gt;
+            </div>
 
-        <p>Next lets make a class called LineChart, to make a new line chart make a new instance of the class then call the CreateLineChart function</p>
+            <p>Next lets make a class called LineChart, to make a new line chart make a new instance of the class then call
+                the CreateLineChart function</p>
 
-      <div class="code">
-          <p class="codeComment">// makes new instance of the LineChart class called LC, passing 2 params first the inital value in the line chart second the ID of the div to place it in</p>
-           <p> let LC = new LineChart(57,'LineChart1');</p>
-           <p class="codeComment">// call the CreateLineChart method</p>
-            <p>LC.CreateLineChart();</p>
-      </div>
+            <div class="code">
+                <p class="codeComment">// makes new instance of the LineChart class called LC, passing 2 params first the inital value in the line
+                    chart second the ID of the div to place it in</p>
+                <p> let LC = new LineChart(57,'LineChart1');</p>
+                <p class="codeComment">// call the CreateLineChart method</p>
+                <p>LC.CreateLineChart();</p>
+            </div>
 
             <p>Adding the CLass </p>
             <div class="code">
