@@ -545,5 +545,21 @@ h2{
             -webkit-transform: rotate(359deg);
     }
 }
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  
+
+
+    .hero-image {
+        background-image: url("img/Mobile-Hero-Banner.png");
+        width: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 3rem;
+    }
+  }
 
 
