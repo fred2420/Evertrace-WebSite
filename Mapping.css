@@ -140,9 +140,10 @@ html, body{
 
   .StatsBoxes{
     overflow-x: hidden;
-    padding: 20px;
+    padding: 0px;
     border: black;
     border-width: 2px;
+    width: 10%;
 
   }
   
