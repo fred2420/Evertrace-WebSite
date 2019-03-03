@@ -8,6 +8,8 @@ body, html {
     line-height: 1.7rem;
 }
 
+
+
 /* The hero image */
 .hero-image {
     background-image: url("img/Hero-Banner.png");
@@ -550,11 +552,9 @@ h2{
       background-color: lightblue;
     }
   
-
-
     .hero-image {
         background-image: url("img/Mobile-Hero-Banner.png");
-        width: 100%;
+        height: 100%;
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
