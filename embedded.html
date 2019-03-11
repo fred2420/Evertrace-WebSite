@@ -2,629 +2,873 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Embedded</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="embedded.css">
-        <link rel="stylesheet" href="/wiki.css">
-        
-    </head>
-    <body>
-            <img src="img/Logo.png" height="80px" style="position: absolute; margin: 40px;">
-            <div class="menu">
-                <a href="index.html">Home</a>
-                <a href="Hardware.html">Hardware</a>
-                <a href="embedded.html">Embedded</a>
-                <a href="Software.html">Software</a>
-              </div>
-          <div class="hero-image">
-            <div class="hero-text">
-              <h2 >Embedded</h2>
-              <p style="color: #31b2f8">Quectel and Atmel code</p>
-            </div>
-          </div>    
-          <div class="fadee" >
-              <div class="hero-bottom-menu">
-                 
-                </div>
-          </div>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Embedded</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="embedded.css">
+    <link rel="stylesheet" href="Evertrace-WebSite/wiki.css">
+
+</head>
+
+<body>
+    <img src="img/Logo.png" height="80px" style="position: absolute; margin: 40px;">
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="Hardware.html">Hardware</a>
+        <a href="embedded.html">Embedded</a>
+        <a href="Software.html">Software</a>
+    </div>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h2>Embedded</h2>
+            <p style="color: #31b2f8">Quectel and Atmel code</p>
+        </div>
+    </div>
+    <div class="fadee">
+        <div class="hero-bottom-menu">
+
+        </div>
+    </div>
 
 
-          <div class="wiki">
-                <div class="sidenav">
-                    <h2 href="#" id="Overview" onClick="GoTo(this.id)">Overview</h2>
-                    <h3 href="#" id="ArduinoIDE" onClick="GoTo(this.id)" >Arduino IDE</h3>
-                    <h3 href="#" id="ImportBG96Libary" onClick="GoTo(this.id)">Import BG96 Libary</h3>
-                    <h3 href="#" >james</h3>
-    
-                    <h2 href="#" id="ATMega" onClick="GoTo(this.id)">ATMega</h2>
-                    <h3 href="#" id="TempSensor" onClick="GoTo(this.id)" >Temp Sensor</h3>
-                    <h3 href="#" id="RealTimeClock"  onClick="GoTo(this.id)" > Real Time Clock</h3>
+    <div class="wiki">
+        <div class="sidenav">
+            <h2 href="#" id="Overview" onClick="GoTo(this.id)">Overview</h2>
+            <h3 href="#" id="ArduinoIDE" onClick="GoTo(this.id)">Arduino IDE</h3>
+            <h3 href="#" id="ImportBG96Libary" onClick="GoTo(this.id)">Import BG96 Libary</h3>
+            <h3 href="#">james</h3>
 
-                    <h2 href="#" id="BG96" onClick="GoTo(this.id)">BG96</h2>
-                    <h3 href="#" id="RF" onClick="GoTo(this.id)">RF</h3>
-                    <h2 href="#" id="Case" onClick="GoTo(this.id)">Case</h2>
-                </div>
-    
-                <div class="content">
-                        <H3>Quick Links</H3>
-                        <a href="#" target="_blank"> Project Githhub</a>
-                        <a href="#" target="blank">BG96 Libary Github</a>
-                        <a href="https://www.quectel.com/UploadImage/Downlad/Quectel_BG96_AT_Commands_Manual_V2.1.pdf" target="_blank">AT Commands</a>
-                    <h2 id="OverviewHeader">Overview</h2>
+            <h2 href="#" id="ATMega" onClick="GoTo(this.id)">ATMega</h2>
+            <h3 href="#" id="TempSensor" onClick="GoTo(this.id)">Temp Sensor</h3>
+            <h3 href="#" id="RealTimeClock" onClick="GoTo(this.id)"> Real Time Clock</h3>
 
-                    <p>
-                        The embedded software is split into 2 main parts. First is the BG96 quectel library, its job is to abstract away the AT commands of talking directly to the quectel chip. The second deals with reading the sensors on the board and actual user program.
-                    </p>
+            <h2 href="#" id="BG96" onClick="GoTo(this.id)">BG96</h2>
+            <h3 href="#" id="RF" onClick="GoTo(this.id)">RF</h3>
+            <h2 href="#" id="Case" onClick="GoTo(this.id)">Case</h2>
+        </div>
 
-                    <h3 id="ArduinoIDEHeader">Arduino IDE</h3>
-                    <p>The arduino IDE, is a simple IDE that can be used for programming the ATmel range used in the arduino products (nano, micro, uno ect). Other IDE’s can of course be used there are plugins for visual studios and atmel has its own studio built on top of VS 2010 which will both give better debugging, source control ect options but for now the arduino IDE is simple and easy to get up and running. Download the arduino IDE <a href="https://www.arduino.cc/en/Main/Software">here</a>.</p>
-                    <h4>“Hello Evertrace”</h4>
+        <div class="content">
+            <H3>Quick Links</H3>
+            <a href="#" target="_blank"> Project Githhub</a>
+            <a href="#" target="blank">BG96 Libary Github</a>
+            <a href="https://www.quectel.com/UploadImage/Downlad/Quectel_BG96_AT_Commands_Manual_V2.1.pdf" target="_blank">AT
+                Commands</a>
+            <h2 id="OverviewHeader">Overview</h2>
 
-                    <img src="img/ArdunioIDE.png">
-                    <p>The evertrace board has 6 debug leds on board. Make sure all the jumpers are connected. 
-                     Below is the code to blink on of the debug LEDs on and off. Set the LED int to one of the pins connected to the debug LEDs. </p>
+            <p>
+                The embedded software is split into 2 main parts. First is the BG96 quectel library, its job is to
+                abstract away the AT commands of talking directly to the quectel chip. The second deals with reading
+                the sensors on the board and actual user program.
+            </p>
 
-                     <img src="img/Hello-Blinky.png">
+            <h3 id="ArduinoIDEHeader">Arduino IDE</h3>
+            <p>The arduino IDE, is a simple IDE that can be used for programming the ATmel range used in the arduino
+                products (nano, micro, uno ect). Other IDE’s can of course be used there are plugins for visual studios
+                and atmel has its own studio built on top of VS 2010 which will both give better debugging, source
+                control ect options but for now the arduino IDE is simple and easy to get up and running. Download the
+                arduino IDE <a href="https://www.arduino.cc/en/Main/Software">here</a>.</p>
+            <h4>“Hello Evertrace”</h4>
 
-                    
-                    
-                    
-                    <H3 id="ImportBG96LibaryHeader">Import BG96 Libary</H3>
-                    <H4>How to import the BG96 Libary</H4>
-                   <p>
-                        In order to send a message from the evertrace board to Azure IOT hub the BG96 library needs to be imported and given a few basic setup features. 
-                        <br>
-                       <p> The below code connects to azure IOT hub and sends STEVE every 10 seconds</p>
-                   </p>
+            <img src="img/ArdunioIDE.png">
+            <p>The evertrace board has 6 debug leds on board. Make sure all the jumpers are connected.
+                Below is the code to blink on of the debug LEDs on and off. Set the LED int to one of the pins
+                connected to the debug LEDs. </p>
+
+            <img src="img/Hello-Blinky.png">
 
 
-                     <div class="code">
-                <code > 
-                    <p><span class="variable">#include</span> <code>< BG96.h ></code></p> 
-                    <p class="codeComment"> // initilise the quectel module and set its pins.</p>
-                    <p class="codeComment">// (Tx,Rx,ResetPin)</p>
-                    <p>BG96 <span class="keyword">bg96</span>(7,8,4);</p>
-                    <p><span class="variable">void</span> setup() {</p>
-                        
-                    <p class="codeComment">// turn on the module, can convert the baud rate to what ever you want.</p>
-                    <p><span class="keyword">bg96</span>.SetBaudRate(9600);</p>
-                    <p class="codeComment">//set Pin e.g 1119</p>
-                    <p><span class="keyword">bg96</span>.Connect(1119);</p>
-                    <p>}</p>
-                    <p><span class="variable">char</span> POSTURL[] = <span class="string">"/devices/TraceOne/messages/events?api-version=2016-02-03"</span>;</p>
-                   <p> <span class="variable">char</span> Host[] = "<span class="string">EverTraceIOTHUB.azure-devices.net</span>";</p>
-                   <p> <span class="variable">char</span> SASKey[] = <span class="string">"SharedAccessSignature sr=PrototypeIOTHUB.azure-devices.net&sig=**************************************************skn=iothubowner"</span>;</p>
-                    <p><span class="variable">void</span> loop() {</p>
-                        <p> <span class="variable">char</span>  Content[] = <span class="string">"steve"</span>;</p>
-                       <p> <span class="keyword">bg96</span>.HTTPPost(POSTURL,Host,SASKey,Content);</p>
-                       <p>delay(10000);</p>
-                    <p>}</p>
-                </code>
-                </div>
 
-                <p>In the line below: make a instance of the BG96 libary called bg96. It requires which pins are connected from the BG96 chip to the ATMEGA, (TX,RX.RESET) reset is pulled low to reset the module and is called if the chip gets stuck</p>
-                
-                <div class="codesingle"><p><p>BG96 <span class="keyword">bg96</span>(7,8,4);</p></p></div>
 
-                <p>Set the Baudrate of the quectel module, speeds above 115000 are too high as they start having problems communicating with the ATMEGA</p>
-                
-                <div class="codesingle"><p><span class="keyword">bg96</span>.SetBaudRate(9600);</p></div>
+            <H3 id="ImportBG96LibaryHeader">Import BG96 Libary</H3>
+            <H4>How to import the BG96 Libary</H4>
+            <p>
+                In order to send a message from the evertrace board to Azure IOT hub the BG96 library needs to be
+                imported and given a few basic setup features.
+                <br>
+                <p> The below code connects to azure IOT hub and sends STEVE every 10 seconds</p>
+            </p>
 
-                <p>Give the PIN Number of the sim card</p>
 
-                <div class="codesingle"><p><span class="keyword">bg96</span>.Connect(1119);</p></div>
-                
-                <p>Pass the PostURL Host and SAS key from azure - details how to find these are on the software page, These need to be passed as a Char array</p>
-              <div class="code">
-                    <p><span class="variable">char</span> POSTURL[] = <span class="string">"/devices/TraceOne/messages/events?api-version=2016-02-03"</span>;</p>
-                    <p> <span class="variable">char</span> Host[] = <span class="string">"EverTraceIOTHUB.azure-devices.net"</span>;</p>
-                    <p> <span class="variable">char</span> SASKey[] = <span class="string">"SharedAccessSignature sr=PrototypeIOTHUB.azure-devices.net&sig=**************************************************skn=iothubowner"</span>;</p>
-              </div>
+            <div class="code">
+                <code>
+                    <p><span class="variable">#include</span> <code>< BG96.h ></code></p>
+                <p class="codeComment"> // initilise the quectel module and set its pins.</p>
+                <p class="codeComment">// (Tx,Rx,ResetPin)</p>
+                <p>BG96 <span class="keyword">bg96</span>(7,8,4);</p>
+                <p><span class="variable">void</span> setup() {</p>
 
-              <p>Inside the loop function call the HTTPost function and pass the setup varibles plus the content you wish to send to the IOT Hub, In the code below steve will be sent every 10 seconds. Normally however sending JSON would be used</p>
-
-              <div class="code">
-                  <p><span class="variable">void</span> loop() {</p>
-                    <p><span class="variable">char</span> Content[] = <span class="string"<p>>"steve"</span>;</p></p>
-                   <p> <span class="keyword">bg96</span>.HTTPPost(POSTURL,Host,SASKey,Content);</p>
-                   <p>delay(10000);</p>
+                <p class="codeComment">// turn on the module, can convert the baud rate to what ever you want.</p>
+                <p><span class="keyword">bg96</span>.SetBaudRate(9600);</p>
+                <p class="codeComment">//set Pin e.g 1119</p>
+                <p><span class="keyword">bg96</span>.Connect(1119);</p>
                 <p>}</p>
-              </div>
-
-
-
-                
-                
-    
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                   
-                    <h3>Format HTTP Post</h3>
-                    <div class="code">
-                        <p>POST /devices/BigBox/messages/events?api-version=2016-02-03 HTTP/1.1</p>
-                        <p>Host: PrototypeIOTHUB.azure-devices.net</p>
-                        <p>Content-Type: application/json</p>
-                        <p>Authorization: SharedAccessSignature sr=PrototypeIOTHUB.azure-devices.net&sig=xdGxBRTkBhokbQnvVmdz45BMUomhv85hBvkKJJ69z6A%3D&se=1554564056&skn=iothubowner</p>
-                        <p>User-Agent: QUECTEL_MODULE</p>
-                        <p>Connection: Keep-Alive</p>
-                        <p>Cache-Control: no-cache</p>
-                        <p></p>
-
-                        <p>{"Lat" : 14.00000, "Long" :40.00000, "TimeStamp" : "2017-05-27 05:29:50Z", "Name": "test2", "Temp": 640}</p>
-
-                    </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                   
-                    <h2 href="#" id="ATMegaHeader">ATMega</h2>
-
-                    <h3 href="#" id="TempSensorHeader">Temp Sensor</h3>
-                    <h3 href="#" id="RealTimeClockHeader"> Real Time Clock</h3>
-                   
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <h2 href="#" id="BG96Header">BG96</h2>
-                    <h3>Overview</h3>
-
-                    <h3>Functions</h3>
-                    <div class="code">
-                        <p><span class="variable">void</span> BG96::SetBaudRate(int BaudRate)</p>
-                            <p>{</p>
-                            <p>    //static int QuectelResetPin = 4;</p>
-                            <p>    BG96Serial.listen();</p>
-                            <p>    int i;</p>
-                            <p>    String ReceivedMessage;</p>
-                            <p>    Serial.begin(9600);</p>
-                            <p>    BG96Serial.begin(9600);</p>
-                            
-                            <p>    while (true)</p>
-                            <p>    {</p>
-                            <p>        Serial.println("ON/OFF");</p>
-                            <p>        pinMode(_Reset, OUTPUT);</p>
-                            <p>        digitalWrite(_Reset, LOW);</p>
-                            <p>        delay(3000);</p>
-                            <p>        pinMode(_Reset, INPUT);</p>
-                            <p>        for (i = 0; i <= 2; i++)</p>
-                            <p>        {</p>
-                            <p>            BG96Serial.begin(115200);</p>
-                            <p>            ReceivedMessage = BG96Serial.readString();</p>
-                            <p>            BG96Serial.println("AT");</p>
-                              <p>          ReceivedMessage = BG96Serial.readString();</p>
-                              <p>          if (ReceivedMessage.indexOf("OK") > 0)</p>
-                              <p>          {</p>
-                            <p></p>
-                            <p>                Serial.println("Started");</p>
-                            <p>                Serial.print("\n changing  baudrates");</p>
-                            <p>                BG96Serial.println("AT+IPR=9600");</p>
-                            <p>                Serial.end();</p>
-                            <p>                BG96Serial.end();</p>
-                            <p>                Serial.begin(9600);</p>
-                            <p>                BG96Serial.begin(9600);</p>
-                            <p>                i = 0;</p>
-                            <p>                goto done;</p>
-                            <p>            }</p>
-                            <p>            else</p>
-                            <p>            {</p>
-                            <p>                Serial.println("Retry at 115200" + i);</p>
-                            <p>            };</p>
-                            
-                            <p>            delay(1000);</p>
-                            <p>        }</p>
-                            <p>        i = 0;</p>
-                            
-                            
-                            <p>        for (i = 0; i <= 2; i++)</p>
-                            <p>        {</p>
-                            <p>            </p>
-                            <p>            BG96Serial.begin(BaudRate);</p>
-                            <p>            BG96Serial.println("AT");</p>
-                            <p>            delay(1000);</p>
-                            <p>            ReceivedMessage = BG96Serial.readString();</p>
-                            <p>            if (ReceivedMessage.indexOf("OK") > 0)</p>
-                            <p>            {</p>
-                            <p>                Serial.println("Started");</p>
-                            <p>                i = 0;</p>
-                            <p>                goto done;</p>
-                            <p>            }</p>
-                            <p>            else</p>
-                            <p>            {</p>
-                            <p>                Serial.print("Retry at "); Serial.print(BaudRate); Serial.println(" " + i);</p>
-                            <p>            };</p>
-                            <p>        }</p>
-                            <p>    }</p>
-                            <p></p>
-                            <p>done:</p>
-                            <p>    </p>
-                            <p>    delay(1000);</p>
-                            <p>    BG96Serial.println("AT+IPR?");</p>
-                            <p>    delay(400);</p>
-                            <p>    Serial.print(BG96Serial.readString() + "\n");</p>
-                            
-                                <p>delay(200);</p>
-                                <p>Serial.print(BG96Serial.readString() + "\n");</p>
-                                <p>Serial.end();</p>
-                                <p>BG96Serial.end();</p>
-                                <p>Serial.begin(9600);</p>
-                            <p>}</p>
-                        </div>
-
-
-                    <div class="code">
-                            <p>#include "Arduino.h"</p>
-                            <p>#include "BG96.h"</p>
-                            <p>#include < SoftwareSerial.h ></p>
-                            
-                            <p>int _Tx;</p>
-                            <p>int _Rx;</p>
-                            <p>int _Reset;</p>
-                            <p>int _Pin;</p>
-                            <p>//SoftwareSerial BG96Serial(_Tx,_Rx);</p>
-                           <p> // Constructor</p>
-                           <p> BG96::BG96(int Tx, int Rx, int Reset ):	</p>
-                            <p>    _Tx(Tx), 	</p>
-                            <p>     _Rx(Rx),</p>
-                            <p>     _Reset(Reset),</p>
-                            <p>    BG96Serial(Tx, Rx)</p>
-                            <p>{</p>
-                            <p>}</p>
-                            
-                            
-                            
-                            <p><span class="variable">void</span> BG96::Connect(int pin)</p>
-                            <p>{</p>
-                                <p>BG96Serial.listen();</p>
-                                <p>//saves pin for use in other functions</p>
-                                <p>_Pin = pin;</p>
-                            <p>//	SoftwareSerial BG96Serial(_Tx,_Rx); // rx , tx</p>
-                               <p> Serial.begin(9600);</p>
-                                <p>BG96Serial.begin(9600);</p>
-                            
-                                <p>String ReceivedMessage;</p>
-                            
-                                <p>BG96Serial.listen();</p>
-                                <p>BG96Serial.println("AT");</p>
-                                <p>Serial.println("AT sent");</p>
-                            
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                                <p>/// Cpin set the pin of the sim card, If the sim is already unlocked it will reply with error, this needs to be set to the front of the SetBG96 function so it can do the stuff below</p>
-                                <p>BG96Serial.print("AT+CPIN = "); BG96Serial.println(pin);</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                               <p> delay(100);</p>
-                                <p>BG96Serial.println("ATV1");</p>
-                            
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            
-                                <p>// Set Echo 1 = echo on 0 = off</p>
-                                <p>BG96Serial.println("ATE0");</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            
-                                <p>BG96Serial.println("AT+CMEE=2");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            
-                            
-                                <p>BG96Serial.println("AT+GSN");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            
-                            
-                                <p>BG96Serial.println("ATI");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            
-                            <p></p>
-                                <p>BG96Serial.println("AT+COPS");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            <p></p>
-                            
-                                <p>BG96Serial.println("AT+QCCID");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            <p></p>
-                                <p>BG96Serial.println("AT+COPS?");</p>
-                            <p></p>
-                                <p>ReceivedMessage = BG96Serial.readString();</p>
-                                <p>Serial.print(ReceivedMessage);	</p>
-                                <p>if (ReceivedMessage.indexOf("Vod") > 0)</p>
-                                <p>{</p>
-                                <p>    Serial.println("Connected");</p>
-                                <p>}</p>
-                                <p>else</p>
-                                <p>{</p>
-                            <p>//		Serial.println("Not connected");</p>
-                                <p>    Connect(_pin);</p>
-                                <p>};</p>
-                                    
-                            <p></p>
-                                <p>ReceivedMessage = BG96Serial.readString();</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            <p></p>
-                                <p>BG96Serial.println("AT+CSQ");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            
-                            
-                                <p>// registers on the network</p>
-                                <p>BG96Serial.println("AT+CREG?");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            <p></p>
-                            
-                                <p>BG96Serial.println("AT+QIACT=1");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                            <p></p>
-                                <p>// turns header request on allowing to read the http responce codes</p>
-                                <p>BG96Serial.println("AT+QHTTPCFG = \"requestheader\",1");</p>
-                                <p>//    Serial.print("AT+QHTTPCFG = \"requestheader\",1\n");</p>
-                                <p>while (BG96Serial.available() == 0) {}</p>
-                                <p>Serial.print(BG96Serial.readString() + "\n\n\n");</p>
-                                <p>Serial.flush();</p>
-                                <p>delay(100);</p>
-                            <p>// turns on GPS always</p>
-                                <p>BG96Serial.println("AT+QGPS=1");</p>
-                                <p>delay(300);</p>
-                                <p>Serial.print(BG96Serial.readString());</p>
-                                <p>Serial.flush();</p>
-                                <p>BG96Serial.flush();</p>
-                                <p>delay(100);</p>
-                                <p>Serial.println("GPS ON");</p>
-                                <p></p>
-                            
-                                <p>Serial.print("\n**********\n CONNECTED\n************\n");</p>
-                            <p>}</p>
-                            
-                            <p><span class="variable">void</span> BG96::SetPins(int Tx, int Rx, int Reset)</p>
-                            <p>{</p>
-                             <p>_Tx = Tx;</p>
-                             <p>_Rx = Rx;</p>
-                             <p>_Reset = Reset;</p>
-                            <p>}</p>
-                            
-                            <span class="variable">void</span> BG96::CheckMessage(String ctemp)
-                            <p>{</p>
-                            <p>int timer = 0;</p>
-                            <p>bool receivedConnect = false;</p>
-                            <p>  for (timer = 0; timer < 30 && receivedConnect == false; timer++)</p>
-                            <p>  {</p>
-                            <p>    Serial.print(String(timer));</p>
-                            <p>    if (BG96Serial.available() > 0)</p>
-                            <p>    {</p>
-                            <p>      String httpCon = BG96Serial.readString();</p>
-                            <p>      Serial.print(httpCon);</p>
-                            <p>      String networkfail = "+CME ERROR: Http network open fail";</p>
-                            <p>      httpCon.trim();</p>
-                            <p>      if (httpCon.equals(ctemp))</p>
-                            <p>      {</p>
-                            <p>        receivedConnect = true; </p>
-                            <p>      }   </p>
-                            <p>         if (httpCon.equals(networkfail))</p>
-                            <p>      {</p>
-                            <p>      Connect(_pin);</p>
-                            <p>      }   </p>
-                            <p>    }</p>
-                            <p>    if (timer > 58)</p>
-                            <p>    {</p>
-                            <p>      Connect(_pin);</p>
-                            <p>    }</p>
-                            <p>    delay(1000);</p>
-                            <p>  }</p>
-                            <p>}</p>
-                            
-                            <p><span class="variable">void</span> BG96::PutURL(<span class="variable">char</span> URL[])</p>
-                            <p>{</p>
-                            <p></p>
-                            <p>Serial.println (strlen(URL));</p>
-                            <p></p>
-                            
-                            <p>BG96Serial.print("AT+QHTTPURL=");BG96Serial.print(strlen(URL));BG96Serial.println(",10");</p>
-                            <p>Serial.print("AT+QHTTPURL=");Serial.print(strlen(URL));Serial.println(",10");</p>
-                            <p></p>
-
-                            
-                            <p>CheckMessage("CONNECT");</p>
-                            <p>Serial.println(URL);</p>
-                            <p>BG96Serial.println(URL);</p>
-                           
-                            <p>CheckMessage("OK");</p>
-                            <p>}</p>
-                            
-                            <p><span class="variable">void</span> BG96::CheckConnected()</p>
-                            <p>{</p>
-                            <p>int timer = 0;</p>
-                            <p>bool receivedConnect = false;</p>
-                            <p>  for (timer = 0; timer < 30 && receivedConnect == false; timer++)</p>
-                            <p>  {</p>
-                            <p>    Serial.print(String(timer));</p>
-                            <p>    if (BG96Serial.available() > 0)</p>
-                            <p>    {</p>
-                            <p>    String ctemp = "CONNECT";</p>
-                            <p>      String httpCon = BG96Serial.readString();</p>
-                            <p>      Serial.print(httpCon);</p>
-                            <p>      String networkfail = "+CME ERROR: Http network open fail";</p>
-                            <p>      httpCon.trim();</p>
-                            <p>      if (httpCon.equals(ctemp))</p>
-                            <p>      {</p>
-                            <p>        receivedConnect = true; </p>
-                            <p>      }   </p>
-                            <p>         if (httpCon.equals(networkfail))</p>
-                            <p>      {</p>
-                             <p>     Connect(_pin);</p>
-                             <p>     }   </p>
-                             <p>   }</p>
-                             <p>   if (timer > 58)</p>
-                             <p>   {</p>
-                             <p>     Connect(_pin);</p>
-                             <p>   }</p>
-                             <p>   delay(1000);</p>
-                             <p> }</p>
-                            <p>}</p>
-                            
-                            
-                            <p><span class="variable">void</span> BG96::GPS()</p>
-                            <p>{</p>
-                            <p>Serial.print("*****GPS****");</p>
-                            
-                            
-                                
-                            
-                            <p>    BG96Serial.println("AT+QGPSLOC?");</p>
-                            <p>    delay(300);</p>
-                            <p>    Serial.print(BG96Serial.readString());</p>
-                            <p>    Serial.flush();</p>
-                            <p>    BG96Serial.flush();</p>
-                            <p>    delay(100);</p>
-                            
-                            <p>    BG96Serial.println("AT+QGPSCFG=?");</p>
-                            <p>    delay(300);</p>
-                            <p>    Serial.print(BG96Serial.readString());</p>
-                            <p>    Serial.flush();</p>
-                            <p>    BG96Serial.flush();</p>
-                            <p>    delay(100);</p>
-                            }
-                            
-                           <p> <span class="variable">void</span> BG96::OpenTCP(<span class="variable">char</span> URL[],int Port)</p>
-                           <p> {</p>
-                           <p> BG96Serial.print("AT+QIOPEN=1,0,\"TCP\",");  BG96Serial.print(URL); BG96Serial.print( ","); BG96Serial.println(Port);</p>
-                           <p> delay(300);</p>
-                           <p> Serial.print(BG96Serial.readString());</p>
-                           <p> }</p>
-                            
-                           <p> <span class="variable">void</span> BG96::HTTPPost(<span class="variable">char</span> POSTURL[], <span class="variable">char</span> Host[], <span class="variable">char</span> SASKey[], <span class="variable">char</span> Content[])</p>
-                           <p> {</p>
-                           <p> static <span class="variable">char</span> OpeningPost[] = "POST ";</p>
-                           <p> static <span class="variable">char</span> EndingPost[] = " HTTP/1.1\n";</p>
-                           <p> static <span class="variable">char</span> BoilerHost[] = "Host: "; </p>
-                           <p> static <span class="variable">char</span> BoilerLines[] = "\nAccept: */*\nUser-Agent: QUECTEL_MODULE\nConnection: Keep-Alive\nContent-Type: application/json\nAuthorization: "; </p>
-                           <p> static <span class="variable">char</span> BoilerContent[] = "\nCache-Control: no-cache\nContent-Length: "; </p>
-                           <p>  int ContentLength = 2;</p>
-                           <p> if (sizeof(Content) < 10)</p>
-                           <p> {</p>
-                           <p>  ContentLength = 1;</p>
-                           <p> }</p>
-                           <p> if (sizeof(Content) > 9)</p>
-                           <p> {</p>
-                           <p>  ContentLength = 2;</p>
-                           <p> }</p>
-                           <p> if (sizeof(Content) > 99)</p>
-                           <p> {</p>
-                            <p> ContentLength = 3;</p>
-                            <p>}</p>
-                            <p>Serial.print("AT+QHTTPPOST="); Serial.print(strlen(Content) + strlen(OpeningPost)  + strlen(EndingPost)  + strlen(BoilerHost)  + strlen(Host) +  strlen(POSTURL) + strlen(BoilerLines) + strlen(SASKey) + strlen(BoilerContent)  +5 + ContentLength);     Serial.println(",25, 25");</p>
-                            <p>BG96Serial.print("AT+QHTTPPOST="); BG96Serial.print(strlen(Content) + strlen(OpeningPost)  + strlen(EndingPost)  + strlen(BoilerHost)  + strlen(Host) + strlen(POSTURL)+ strlen(BoilerLines)  + strlen(SASKey)  + strlen(BoilerContent)  +5 + ContentLength) ; BG96Serial.println(",25, 25");</p>
-                            
-                           <p> while (BG96Serial.available() == 0) {}</p>
-                           <p> Serial.print(BG96Serial.readString());</p>
-                            
-                           <p> Serial.print(BG96Serial.readString());</p>
-                            
-                           <p> Serial.print(OpeningPost);</p>
-                          <p>  Serial.print(POSTURL);</p>
-                          <p>  Serial.print(EndingPost);</p>
-                          <p>  Serial.print(BoilerHost);</p>
-                          <p>  Serial.print(Host);</p>
-                          <p>  Serial.print(BoilerLines);</p>
-                          <p>  Serial.print(SASKey);</p>
-                          <p>  Serial.print(BoilerContent);</p>
-                          <p>  Serial.print(strlen(Content));</p>
-                          <p>  Serial.print("\n\n");</p>
-                          <p>  Serial.println(Content);</p>
-                          <p>  Serial.print("\n\n");</p>
-                            
-                          <p>  BG96Serial.print(OpeningPost);</p>
-                          <p>  BG96Serial.print(POSTURL);</p>
-                          <p>  BG96Serial.print(EndingPost);</p>
-                          <p>  BG96Serial.print(BoilerHost);</p>
-                          <p>  BG96Serial.print(Host);</p>
-                          <p>  BG96Serial.print(BoilerLines);</p>
-                          <p>  BG96Serial.print(SASKey);</p>
-                          <p>  BG96Serial.print(BoilerContent);</p>
-                          <p>  BG96Serial.print(strlen(Content));</p>
-                          <p>  BG96Serial.print("\n\n");</p>
-                          <p>  BG96Serial.println(Content);</p>
-                          <p>  BG96Serial.print("\n\n");</p>
-                            
-                          <p>  while (BG96Serial.available() == 0) {}</p>
-                          <p>  String ans = BG96Serial.readString();</p>
-                            
-                          <p>  if (ans.indexOf("+QHTTPPOST: 0,204,0") > 0)</p>
-                          <p>              {</p>
-                          <p>  Serial.println("OK Got");</p>
-                          <p>              }</p>
-                          <p>  Serial.println(BG96Serial.readString());</p>
-                            
-                          <p>  }</p>
-
-                    </div>
-                    <h3 href="#" id="RFHeader">RF</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <h2 href="#" id="CaseHeader">Case</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas, sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore? Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem odio sint accusantium veniam sunt vero.</p>
-         
-               
-                </div>
+                <p><span class="variable">char</span> POSTURL[] = <span class="string">"/devices/TraceOne/messages/events?api-version=2016-02-03"</span>;</p>
+                <p> <span class="variable">char</span> Host[] = "<span class="string">EverTraceIOTHUB.azure-devices.net</span>";</p>
+                <p> <span class="variable">char</span> SASKey[] = <span class="string">"SharedAccessSignature
+                        sr=PrototypeIOTHUB.azure-devices.net&sig=**************************************************skn=iothubowner"</span>;</p>
+                <p><span class="variable">void</span> loop() {</p>
+                <p> <span class="variable">char</span> Content[] = <span class="string">"steve"</span>;</p>
+                <p> <span class="keyword">bg96</span>.HTTPPost(POSTURL,Host,SASKey,Content);</p>
+                <p>delay(10000);</p>
+                <p>}</p>
+                </code>
             </div>
-        
-        <script src="wiki.js" ></script>
-    </body>
+
+            <p>In the line below: make a instance of the BG96 libary called bg96. It requires which pins are connected
+                from the BG96 chip to the ATMEGA, (TX,RX.RESET) reset is pulled low to reset the module and is called
+                if the chip gets stuck</p>
+
+            <div class="codesingle">
+                <p>
+                    <p>BG96 <span class="keyword">bg96</span>(7,8,4);</p>
+                </p>
+            </div>
+
+            <p>Set the Baudrate of the quectel module, speeds above 115000 are too high as they start having problems
+                communicating with the ATMEGA</p>
+
+            <div class="codesingle">
+                <p><span class="keyword">bg96</span>.SetBaudRate(9600);</p>
+            </div>
+
+            <p>Give the PIN Number of the sim card</p>
+
+            <div class="codesingle">
+                <p><span class="keyword">bg96</span>.Connect(1119);</p>
+            </div>
+
+            <p>Pass the PostURL Host and SAS key from azure - details how to find these are on the software page, These
+                need to be passed as a Char array</p>
+            <div class="code">
+                <p><span class="variable">char</span> POSTURL[] = <span class="string">"/devices/TraceOne/messages/events?api-version=2016-02-03"</span>;</p>
+                <p> <span class="variable">char</span> Host[] = <span class="string">"EverTraceIOTHUB.azure-devices.net"</span>;</p>
+                <p> <span class="variable">char</span> SASKey[] = <span class="string">"SharedAccessSignature
+                        sr=PrototypeIOTHUB.azure-devices.net&sig=**************************************************skn=iothubowner"</span>;</p>
+            </div>
+
+            <p>Inside the loop function call the HTTPost function and pass the setup varibles plus the content you wish
+                to send to the IOT Hub, In the code below steve will be sent every 10 seconds. Normally however sending
+                JSON would be used</p>
+
+            <div class="code">
+                <p><span class="variable">void</span> loop() {</p>
+                <p><span class="variable">char</span> Content[] = <span class="string" <p>>"steve"</span>;</p>
+                </p>
+                <p> <span class="keyword">bg96</span>.HTTPPost(POSTURL,Host,SASKey,Content);</p>
+                <p>delay(10000);</p>
+                <p>}</p>
+            </div>
+
+
+
+
+
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+
+            <h3>Format HTTP Post</h3>
+            <div class="code">
+                <p>POST /devices/BigBox/messages/events?api-version=2016-02-03 HTTP/1.1</p>
+                <p>Host: PrototypeIOTHUB.azure-devices.net</p>
+                <p>Content-Type: application/json</p>
+                <p>Authorization: SharedAccessSignature
+                    sr=PrototypeIOTHUB.azure-devices.net&sig=xdGxBRTkBhokbQnvVmdz45BMUomhv85hBvkKJJ69z6A%3D&se=1554564056&skn=iothubowner</p>
+                <p>User-Agent: QUECTEL_MODULE</p>
+                <p>Connection: Keep-Alive</p>
+                <p>Cache-Control: no-cache</p>
+                <p></p>
+
+                <p>{"Lat" : 14.00000, "Long" :40.00000, "TimeStamp" : "2017-05-27 05:29:50Z", "Name": "test2", "Temp":
+                    640}</p>
+
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+
+            <h2 href="#" id="ATMegaHeader">ATMega</h2>
+
+            <h3 href="#" id="TempSensorHeader">Temp Sensor</h3>
+            <h3 href="#" id="RealTimeClockHeader"> Real Time Clock</h3>
+
+            <div class="code">
+                <p> // Date and time functions using a DS1307 RTC connected via I2C and Wire lib</p>
+                <p> #include < Wire.h>
+                </p>
+                <p> #include "RTClib.h"</p>
+
+                <p>#if defined(ARDUINO_ARCH_SAMD)</p>
+                <p>#define Serial SerialUSB</p>
+                <p> #endif</p>
+
+                <p>RTC_DS1307 rtc;</p>
+
+                <p>char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+                    "Saturday"};</p>
+
+                <p>void setup () {</p>
+
+                <p>#ifndef ESP8266</p>
+                <p>while (!Serial); // for Leonardo/Micro/Zero</p>
+                <p> #endif</p>
+
+                <p>Serial.begin(57600);</p>
+                <p>if (! rtc.begin()) {</p>
+                <p>Serial.println("Couldn't find RTC");</p>
+                <p>while (1);</p>
+                <p>}</p>
+
+                <p>if (! rtc.isrunning()) {</p>
+                <p>Serial.println("RTC is NOT running!");</p>
+                <p>// following line sets the RTC to the date & time this sketch was compiled</p>
+                <p>rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));</p>
+                <p>// This line sets the RTC with an explicit date & time, for example to set</p>
+                <p>// January 21, 2014 at 3am you would call:</p>
+                <p>// rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));</p>
+                <p>}</p>
+                <p>}</p>
+
+                <p>void loop () {</p>
+                <p>DateTime now = rtc.now();</p>
+
+                <p>Serial.print(now.year(), DEC);</p>
+                <p>Serial.print('/');</p>
+                <p>Serial.print(now.month(), DEC);</p>
+                <p>Serial.print('/');</p>
+                <p>Serial.print(now.day(), DEC);</p>
+                <p>Serial.print(" (");</p>
+                <p>Serial.print(daysOfTheWeek[now.dayOfTheWeek()]);</p>
+               <p> Serial.print(") ");</p>
+                <p>Serial.print(now.hour(), DEC);</p>
+               <p> Serial.print(':');</p>
+                <p>Serial.print(now.minute(), DEC);</p>
+                <p>Serial.print(':');</p>
+                <p>Serial.print(now.second(), DEC);</p>
+                <p>Serial.println();</p>
+
+                Serial.print(" since midnight 1/1/1970 = ");
+                Serial.print(now.unixtime());
+                Serial.print("s = ");
+                Serial.print(now.unixtime() / 86400L);
+                Serial.println("d");
+
+                // calculate a date which is 7 days and 30 seconds into the future
+                DateTime future (now + TimeSpan(7,12,30,6));
+
+                Serial.print(" now + 7d + 30s: ");
+                Serial.print(future.year(), DEC);
+                Serial.print('/');
+                Serial.print(future.month(), DEC);
+                Serial.print('/');
+                Serial.print(future.day(), DEC);
+                Serial.print(' ');
+                Serial.print(future.hour(), DEC);
+                Serial.print(':');
+                Serial.print(future.minute(), DEC);
+                Serial.print(':');
+                Serial.print(future.second(), DEC);
+                Serial.println();
+
+                Serial.println();
+                delay(3000);
+                }
+            </div>
+
+            <h2 href="#" id="BG96Header">BG96</h2>
+            <h3>Overview</h3>
+
+            <h3>Functions</h3>
+            <div class="code">
+                <p><span class="variable">void</span> BG96::SetBaudRate(int BaudRate)</p>
+                <p>{</p>
+                <p> //static int QuectelResetPin = 4;</p>
+                <p> BG96Serial.listen();</p>
+                <p> int i;</p>
+                <p> String ReceivedMessage;</p>
+                <p> Serial.begin(9600);</p>
+                <p> BG96Serial.begin(9600);</p>
+
+                <p> while (true)</p>
+                <p> {</p>
+                <p> Serial.println("ON/OFF");</p>
+                <p> pinMode(_Reset, OUTPUT);</p>
+                <p> digitalWrite(_Reset, LOW);</p>
+                <p> delay(3000);</p>
+                <p> pinMode(_Reset, INPUT);</p>
+                <p> for (i = 0; i <= 2; i++)</p> <p> {</p>
+                <p> BG96Serial.begin(115200);</p>
+                <p> ReceivedMessage = BG96Serial.readString();</p>
+                <p> BG96Serial.println("AT");</p>
+                <p> ReceivedMessage = BG96Serial.readString();</p>
+                <p> if (ReceivedMessage.indexOf("OK") > 0)</p>
+                <p> {</p>
+                <p></p>
+                <p> Serial.println("Started");</p>
+                <p> Serial.print("\n changing baudrates");</p>
+                <p> BG96Serial.println("AT+IPR=9600");</p>
+                <p> Serial.end();</p>
+                <p> BG96Serial.end();</p>
+                <p> Serial.begin(9600);</p>
+                <p> BG96Serial.begin(9600);</p>
+                <p> i = 0;</p>
+                <p> goto done;</p>
+                <p> }</p>
+                <p> else</p>
+                <p> {</p>
+                <p> Serial.println("Retry at 115200" + i);</p>
+                <p> };</p>
+
+                <p> delay(1000);</p>
+                <p> }</p>
+                <p> i = 0;</p>
+
+
+                <p> for (i = 0; i <= 2; i++)</p> <p> {</p>
+                <p> </p>
+                <p> BG96Serial.begin(BaudRate);</p>
+                <p> BG96Serial.println("AT");</p>
+                <p> delay(1000);</p>
+                <p> ReceivedMessage = BG96Serial.readString();</p>
+                <p> if (ReceivedMessage.indexOf("OK") > 0)</p>
+                <p> {</p>
+                <p> Serial.println("Started");</p>
+                <p> i = 0;</p>
+                <p> goto done;</p>
+                <p> }</p>
+                <p> else</p>
+                <p> {</p>
+                <p> Serial.print("Retry at "); Serial.print(BaudRate); Serial.println(" " + i);</p>
+                <p> };</p>
+                <p> }</p>
+                <p> }</p>
+                <p></p>
+                <p>done:</p>
+                <p> </p>
+                <p> delay(1000);</p>
+                <p> BG96Serial.println("AT+IPR?");</p>
+                <p> delay(400);</p>
+                <p> Serial.print(BG96Serial.readString() + "\n");</p>
+
+                <p>delay(200);</p>
+                <p>Serial.print(BG96Serial.readString() + "\n");</p>
+                <p>Serial.end();</p>
+                <p>BG96Serial.end();</p>
+                <p>Serial.begin(9600);</p>
+                <p>}</p>
+            </div>
+
+
+            <div class="code">
+                <p>#include "Arduino.h"</p>
+                <p>#include "BG96.h"</p>
+                <p>#include < SoftwareSerial.h>
+                </p>
+
+                <p>int _Tx;</p>
+                <p>int _Rx;</p>
+                <p>int _Reset;</p>
+                <p>int _Pin;</p>
+                <p>//SoftwareSerial BG96Serial(_Tx,_Rx);</p>
+                <p> // Constructor</p>
+                <p> BG96::BG96(int Tx, int Rx, int Reset ): </p>
+                <p> _Tx(Tx), </p>
+                <p> _Rx(Rx),</p>
+                <p> _Reset(Reset),</p>
+                <p> BG96Serial(Tx, Rx)</p>
+                <p>{</p>
+                <p>}</p>
+
+
+
+                <p><span class="variable">void</span> BG96::Connect(int pin)</p>
+                <p>{</p>
+                <p>BG96Serial.listen();</p>
+                <p>//saves pin for use in other functions</p>
+                <p>_Pin = pin;</p>
+                <p>// SoftwareSerial BG96Serial(_Tx,_Rx); // rx , tx</p>
+                <p> Serial.begin(9600);</p>
+                <p>BG96Serial.begin(9600);</p>
+
+                <p>String ReceivedMessage;</p>
+
+                <p>BG96Serial.listen();</p>
+                <p>BG96Serial.println("AT");</p>
+                <p>Serial.println("AT sent");</p>
+
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+                <p>/// Cpin set the pin of the sim card, If the sim is already unlocked it will reply with error, this
+                    needs to be set to the front of the SetBG96 function so it can do the stuff below</p>
+                <p>BG96Serial.print("AT+CPIN = "); BG96Serial.println(pin);</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p> delay(100);</p>
+                <p>BG96Serial.println("ATV1");</p>
+
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+
+                <p>// Set Echo 1 = echo on 0 = off</p>
+                <p>BG96Serial.println("ATE0");</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+
+                <p>BG96Serial.println("AT+CMEE=2");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+
+
+                <p>BG96Serial.println("AT+GSN");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+
+
+                <p>BG96Serial.println("ATI");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+
+                <p></p>
+                <p>BG96Serial.println("AT+COPS");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+                <p></p>
+
+                <p>BG96Serial.println("AT+QCCID");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+                <p></p>
+                <p>BG96Serial.println("AT+COPS?");</p>
+                <p></p>
+                <p>ReceivedMessage = BG96Serial.readString();</p>
+                <p>Serial.print(ReceivedMessage); </p>
+                <p>if (ReceivedMessage.indexOf("Vod") > 0)</p>
+                <p>{</p>
+                <p> Serial.println("Connected");</p>
+                <p>}</p>
+                <p>else</p>
+                <p>{</p>
+                <p>// Serial.println("Not connected");</p>
+                <p> Connect(_pin);</p>
+                <p>};</p>
+
+                <p></p>
+                <p>ReceivedMessage = BG96Serial.readString();</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+                <p></p>
+                <p>BG96Serial.println("AT+CSQ");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+
+
+                <p>// registers on the network</p>
+                <p>BG96Serial.println("AT+CREG?");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+                <p></p>
+
+                <p>BG96Serial.println("AT+QIACT=1");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+                <p></p>
+                <p>// turns header request on allowing to read the http responce codes</p>
+                <p>BG96Serial.println("AT+QHTTPCFG = \"requestheader\",1");</p>
+                <p>// Serial.print("AT+QHTTPCFG = \"requestheader\",1\n");</p>
+                <p>while (BG96Serial.available() == 0) {}</p>
+                <p>Serial.print(BG96Serial.readString() + "\n\n\n");</p>
+                <p>Serial.flush();</p>
+                <p>delay(100);</p>
+                <p>// turns on GPS always</p>
+                <p>BG96Serial.println("AT+QGPS=1");</p>
+                <p>delay(300);</p>
+                <p>Serial.print(BG96Serial.readString());</p>
+                <p>Serial.flush();</p>
+                <p>BG96Serial.flush();</p>
+                <p>delay(100);</p>
+                <p>Serial.println("GPS ON");</p>
+                <p></p>
+
+                <p>Serial.print("\n**********\n CONNECTED\n************\n");</p>
+                <p>}</p>
+
+                <p><span class="variable">void</span> BG96::SetPins(int Tx, int Rx, int Reset)</p>
+                <p>{</p>
+                <p>_Tx = Tx;</p>
+                <p>_Rx = Rx;</p>
+                <p>_Reset = Reset;</p>
+                <p>}</p>
+
+                <span class="variable">void</span> BG96::CheckMessage(String ctemp)
+                <p>{</p>
+                <p>int timer = 0;</p>
+                <p>bool receivedConnect = false;</p>
+                <p> for (timer = 0; timer < 30 && receivedConnect==false; timer++)</p> <p> {</p>
+                <p> Serial.print(String(timer));</p>
+                <p> if (BG96Serial.available() > 0)</p>
+                <p> {</p>
+                <p> String httpCon = BG96Serial.readString();</p>
+                <p> Serial.print(httpCon);</p>
+                <p> String networkfail = "+CME ERROR: Http network open fail";</p>
+                <p> httpCon.trim();</p>
+                <p> if (httpCon.equals(ctemp))</p>
+                <p> {</p>
+                <p> receivedConnect = true; </p>
+                <p> } </p>
+                <p> if (httpCon.equals(networkfail))</p>
+                <p> {</p>
+                <p> Connect(_pin);</p>
+                <p> } </p>
+                <p> }</p>
+                <p> if (timer > 58)</p>
+                <p> {</p>
+                <p> Connect(_pin);</p>
+                <p> }</p>
+                <p> delay(1000);</p>
+                <p> }</p>
+                <p>}</p>
+
+                <p><span class="variable">void</span> BG96::PutURL(<span class="variable">char</span> URL[])</p>
+                <p>{</p>
+                <p></p>
+                <p>Serial.println (strlen(URL));</p>
+                <p></p>
+
+                <p>BG96Serial.print("AT+QHTTPURL=");BG96Serial.print(strlen(URL));BG96Serial.println(",10");</p>
+                <p>Serial.print("AT+QHTTPURL=");Serial.print(strlen(URL));Serial.println(",10");</p>
+                <p></p>
+
+
+                <p>CheckMessage("CONNECT");</p>
+                <p>Serial.println(URL);</p>
+                <p>BG96Serial.println(URL);</p>
+
+                <p>CheckMessage("OK");</p>
+                <p>}</p>
+
+                <p><span class="variable">void</span> BG96::CheckConnected()</p>
+                <p>{</p>
+                <p>int timer = 0;</p>
+                <p>bool receivedConnect = false;</p>
+                <p> for (timer = 0; timer < 30 && receivedConnect==false; timer++)</p> <p> {</p>
+                <p> Serial.print(String(timer));</p>
+                <p> if (BG96Serial.available() > 0)</p>
+                <p> {</p>
+                <p> String ctemp = "CONNECT";</p>
+                <p> String httpCon = BG96Serial.readString();</p>
+                <p> Serial.print(httpCon);</p>
+                <p> String networkfail = "+CME ERROR: Http network open fail";</p>
+                <p> httpCon.trim();</p>
+                <p> if (httpCon.equals(ctemp))</p>
+                <p> {</p>
+                <p> receivedConnect = true; </p>
+                <p> } </p>
+                <p> if (httpCon.equals(networkfail))</p>
+                <p> {</p>
+                <p> Connect(_pin);</p>
+                <p> } </p>
+                <p> }</p>
+                <p> if (timer > 58)</p>
+                <p> {</p>
+                <p> Connect(_pin);</p>
+                <p> }</p>
+                <p> delay(1000);</p>
+                <p> }</p>
+                <p>}</p>
+
+
+                <p><span class="variable">void</span> BG96::GPS()</p>
+                <p>{</p>
+                <p>Serial.print("*****GPS****");</p>
+
+
+
+
+                <p> BG96Serial.println("AT+QGPSLOC?");</p>
+                <p> delay(300);</p>
+                <p> Serial.print(BG96Serial.readString());</p>
+                <p> Serial.flush();</p>
+                <p> BG96Serial.flush();</p>
+                <p> delay(100);</p>
+
+                <p> BG96Serial.println("AT+QGPSCFG=?");</p>
+                <p> delay(300);</p>
+                <p> Serial.print(BG96Serial.readString());</p>
+                <p> Serial.flush();</p>
+                <p> BG96Serial.flush();</p>
+                <p> delay(100);</p>
+                }
+
+                <p> <span class="variable">void</span> BG96::OpenTCP(<span class="variable">char</span> URL[],int Port)</p>
+                <p> {</p>
+                <p> BG96Serial.print("AT+QIOPEN=1,0,\"TCP\","); BG96Serial.print(URL); BG96Serial.print( ",");
+                    BG96Serial.println(Port);</p>
+                <p> delay(300);</p>
+                <p> Serial.print(BG96Serial.readString());</p>
+                <p> }</p>
+
+                <p> <span class="variable">void</span> BG96::HTTPPost(<span class="variable">char</span> POSTURL[],
+                    <span class="variable">char</span> Host[], <span class="variable">char</span> SASKey[], <span class="variable">char</span>
+                    Content[])</p>
+                <p> {</p>
+                <p> static <span class="variable">char</span> OpeningPost[] = "POST ";</p>
+                <p> static <span class="variable">char</span> EndingPost[] = " HTTP/1.1\n";</p>
+                <p> static <span class="variable">char</span> BoilerHost[] = "Host: "; </p>
+                <p> static <span class="variable">char</span> BoilerLines[] = "\nAccept: */*\nUser-Agent:
+                    QUECTEL_MODULE\nConnection: Keep-Alive\nContent-Type: application/json\nAuthorization: "; </p>
+                <p> static <span class="variable">char</span> BoilerContent[] = "\nCache-Control:
+                    no-cache\nContent-Length: "; </p>
+                <p> int ContentLength = 2;</p>
+                <p> if (sizeof(Content) < 10)</p> <p> {</p>
+                <p> ContentLength = 1;</p>
+                <p> }</p>
+                <p> if (sizeof(Content) > 9)</p>
+                <p> {</p>
+                <p> ContentLength = 2;</p>
+                <p> }</p>
+                <p> if (sizeof(Content) > 99)</p>
+                <p> {</p>
+                <p> ContentLength = 3;</p>
+                <p>}</p>
+                <p>Serial.print("AT+QHTTPPOST="); Serial.print(strlen(Content) + strlen(OpeningPost) +
+                    strlen(EndingPost) + strlen(BoilerHost) + strlen(Host) + strlen(POSTURL) + strlen(BoilerLines) +
+                    strlen(SASKey) + strlen(BoilerContent) +5 + ContentLength); Serial.println(",25, 25");</p>
+                <p>BG96Serial.print("AT+QHTTPPOST="); BG96Serial.print(strlen(Content) + strlen(OpeningPost) +
+                    strlen(EndingPost) + strlen(BoilerHost) + strlen(Host) + strlen(POSTURL)+ strlen(BoilerLines) +
+                    strlen(SASKey) + strlen(BoilerContent) +5 + ContentLength) ; BG96Serial.println(",25, 25");</p>
+
+                <p> while (BG96Serial.available() == 0) {}</p>
+                <p> Serial.print(BG96Serial.readString());</p>
+
+                <p> Serial.print(BG96Serial.readString());</p>
+
+                <p> Serial.print(OpeningPost);</p>
+                <p> Serial.print(POSTURL);</p>
+                <p> Serial.print(EndingPost);</p>
+                <p> Serial.print(BoilerHost);</p>
+                <p> Serial.print(Host);</p>
+                <p> Serial.print(BoilerLines);</p>
+                <p> Serial.print(SASKey);</p>
+                <p> Serial.print(BoilerContent);</p>
+                <p> Serial.print(strlen(Content));</p>
+                <p> Serial.print("\n\n");</p>
+                <p> Serial.println(Content);</p>
+                <p> Serial.print("\n\n");</p>
+
+                <p> BG96Serial.print(OpeningPost);</p>
+                <p> BG96Serial.print(POSTURL);</p>
+                <p> BG96Serial.print(EndingPost);</p>
+                <p> BG96Serial.print(BoilerHost);</p>
+                <p> BG96Serial.print(Host);</p>
+                <p> BG96Serial.print(BoilerLines);</p>
+                <p> BG96Serial.print(SASKey);</p>
+                <p> BG96Serial.print(BoilerContent);</p>
+                <p> BG96Serial.print(strlen(Content));</p>
+                <p> BG96Serial.print("\n\n");</p>
+                <p> BG96Serial.println(Content);</p>
+                <p> BG96Serial.print("\n\n");</p>
+
+                <p> while (BG96Serial.available() == 0) {}</p>
+                <p> String ans = BG96Serial.readString();</p>
+
+                <p> if (ans.indexOf("+QHTTPPOST: 0,204,0") > 0)</p>
+                <p> {</p>
+                <p> Serial.println("OK Got");</p>
+                <p> }</p>
+                <p> Serial.println(BG96Serial.readString());</p>
+
+                <p> }</p>
+
+            </div>
+            <h3 href="#" id="RFHeader">RF</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <h2 href="#" id="CaseHeader">Case</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas cumque ipsum corporis quas,
+                sapiente accusamus animi eum autem eos nisi accusantium quibusdam facilis? Eveniet earum, ullam
+                reprehenderit aliquam enim delectus sequi non, dolorem molestias vitae minus recusandae iusto similique
+                distinctio magnam amet asperiores excepturi explicabo. Consectetur soluta eum fuga ad facilis expedita
+                molestiae mollitia quod iusto, architecto quibusdam sint dolorem, sapiente odio provident labore?
+                Incidunt laborum facere, deserunt eum atque a nulla numquam rerum veniam. Saepe necessitatibus sed
+                magni aliquam cupiditate nemo, accusantium voluptas illum a minus eveniet nam velit? Dicta hic quidem
+                odio sint accusantium veniam sunt vero.</p>
+
+
+        </div>
+    </div>
+
+    <script src="wiki.js"></script>
+</body>
+
 </html>
