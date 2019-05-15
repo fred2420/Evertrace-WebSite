@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="icon" sizes="256x256" href="img/Icon.png">
     <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="jquery.easypiechart.js"></script>
 
@@ -63,16 +64,16 @@
                 <p class="Fleet-Managment-Text" style="text-align: center">Deployed Trucks</p>
                 <div class="TruckData" onclick="Truck1()">
                     <h3> Truck 1</h3>
-                    <img class="radiowave" src="img/PuppleTracker.svg" style="width: 30%; height: 30%;">
+                    <img class="radiowave" src="img/PuppleTracker.svg" style="width: 60%; height: 60%;">
                 </div>
                 <div class="TruckData" onclick="Truck2()">
                     <h3> Truck 2</h3>
-                    <img class="radiowave" src="img/BlueTracker.svg" style="width: 30%; height: 30%;">
+                    <img class="radiowave" src="img/BlueTracker.svg" style="width: 60%; height: 60%;">
                 </div>
                 <div class="TruckData" onclick="Truck2()">
                     <h3> Truck 3</h3>
                     
-                    <img class="radiowave" src="img/OrangeTracker.svg" style="width: 30%; height: 30%;">
+                    <img class="radiowave" src="img/OrangeTracker.svg" style="width: 60%; height: 60%;">
                 </div>
             </div>
             <div id="myMap"></div>
@@ -290,7 +291,9 @@
             earum doloribus aspernatur iure! Quidem quia esse placeat maxime commodi! esse placeat</p>
     </div>
 
-
+    <div style="width:50%;">
+        <canvas id="mycanvas"></canvas>
+      </div>
 
 
 
@@ -307,6 +310,7 @@
 
     <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.js" ></script>
+    <script src="LineChart.js"></script>
     <script src="AfterEffects/index.js"></script>
     <script src="AfterEffects/TechDetails/index.js"></script>
     <script src="TechDetails.js" async defer></script>
