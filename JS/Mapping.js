@@ -109,7 +109,7 @@ function GetMap() {
         var pins = [
             new HtmlPushpin(new Microsoft.Maps.Location(truck1.Lat, truck1.Long), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/PuppleTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(10, 10)),
             new HtmlPushpin(new Microsoft.Maps.Location(truck2.Lat, truck2.Long), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/BlueTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(10, 10)),
-            new HtmlPushpin(new Microsoft.Maps.Location(48.49596, 9.43048), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/OrangeTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(10, 10)),
+            new HtmlPushpin(new Microsoft.Maps.Location(48.49596, 9.43048), htmlTemplate.replace('{text}', ' <img class="radiowave" src="img/OrangeTracker.svg" style="width: 100%; height: 100%;">'), new Microsoft.Maps.Point(20, 20)),
         ];
 
         var layer = new HtmlPushpinLayer();
